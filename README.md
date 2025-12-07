@@ -1,72 +1,135 @@
-# Book Backend
+ 📘 Physical AI & Humanoid Robotics
+AI-Native Textbook • Multi-Agent System • Robotics Learning Platform
 
-A simple backend application for managing books with CRUD operations.
+A modern, AI-powered textbook project focused on Physical AI, Humanoid Robotics, and Embodied Intelligence.
+This repository includes the complete book structure, chapters, diagrams, agent workflows, tutorials, and automation tools used to build and maintain the textbook.
 
-## Features
+Built with: Next.js, TailwindCSS, Docusaurus, Claude Code, Qwen, and OpenAI Agents.
 
-- Create, Read, Update, and Delete books
-- RESTful API endpoints
-- MongoDB database integration
-- Express.js framework
+🚀 Overview
 
-## Prerequisites
+The Physical AI & Humanoid Robotics Textbook Project is a fully automated learning system designed to help students master:
 
-- Node.js (v14 or higher)
-- MongoDB (either local installation or MongoDB Atlas)
+🤖 Humanoid Robotics
 
-## Installation
+🧠 Embodied & Physical AI
 
-1. Clone the repository:
-   ```bash
-   git clone <your-repo-url>
-   ```
+⚙️ Actuators, Sensors & Mechatronics
 
-2. Navigate to the project directory:
-   ```bash
-   cd book-backend
-   ```
+🦾 Locomotion, Balance & Movement
 
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
+🪫 Energy Systems & Power Design
 
-4. Create a `.env` file in the root directory with the following content:
-   ```env
-   PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/bookstore
-   NODE_ENV=development
-   ```
+🧩 Robotics Algorithms & Control
 
-## Running the Application
+💡 Intelligent Agents & Cognitive Models
 
-### Development Mode
-```bash
+The project uses AI agents to generate, update, and maintain textbook content such as chapters, examples, diagrams, and practice exercises.
+
+📂 Repository Structure
+📁 physical-ai-humanoid-robotics/
+│
+├── 📘 docs/                # Docusaurus book chapters
+├── 🌐 website/             # Next.js + TailwindCSS website
+├── 🤖 agents/              # Claude/Qwen agent configs & skills
+├── 🧠 workflows/           # Automated writing and generation flows
+├── 📊 assets/              # Book diagrams, images, figures
+└── README.md               # Project overview
+
+✨ Key Features
+🔹 1. AI-Native Textbook
+
+Every chapter is generated and maintained by AI agents with clear specifications.
+
+🔹 2. Multi-Agent Writing System
+
+Uses Claude Code, Qwen, and helper subagents for:
+
+Chapter writing
+
+Illustration generation
+
+Example problems
+
+Urdu/English translations
+
+Updating and maintaining content
+
+🔹 3. Complete Robotics Curriculum
+
+From basics of actuators to advanced humanoid locomotion.
+
+🔹 4. Hands-on Tutorials
+
+Code examples, simulations, and hardware notes.
+
+🔹 5. Next.js Website
+
+A modern, responsive website showcasing the entire textbook.
+
+📘 Chapters Included
+
+✔ Introduction to Physical AI
+✔ Humanoid Robotics Architecture
+✔ Sensors, Actuators & Control
+✔ Motion Planning & Locomotion
+✔ Safety, Ethics & Future of Embodied AI
+✔ Labs, Tutorials & Sample Projects
+
+🛠 Tech Stack
+
+Next.js + TailwindCSS — website
+
+Docusaurus — textbook platform
+
+Claude Code / Qwen / OpenAI — multi-agent writing
+
+TypeScript — core codebase
+
+GitHub Actions — automation
+
+🧪 How to Run
+# Install dependencies
+npm install
+
+# Start Docusaurus docs
+npm run start
+
+# Start Next.js website
 npm run dev
-```
 
-### Production Mode
-```bash
-npm start
-```
+🤝 Contributing
 
-## API Endpoints
+Contributions are welcome!
+You can submit:
 
-- `GET /api/books` - Get all books
-- `GET /api/books/:id` - Get a specific book
-- `POST /api/books` - Create a new book
-- `PUT /api/books/:id` - Update a book
-- `DELETE /api/books/:id` - Delete a book
+New chapters
 
-## Example Book Object
+Fixes or improvements
 
-```json
-{
-  "title": "The Great Gatsby",
-  "author": "F. Scott Fitzgerald",
-  "isbn": "978-0-7432-7356-5",
-  "publishedYear": 1925,
-  "genre": "Fiction",
-  "description": "A classic American novel set in the summer of 1922..."
-}
-```
+Diagrams and illustrations
+
+Tutorials/Examples
+
+Please open an Issue before starting major changes.
+
+📜 License
+
+This project is licensed under the MIT License.
+
+🔖 GitHub Tags (Copy & Paste)
+physical-ai
+humanoid-robotics
+robotics-textbook
+ai-textbook
+embodied-intelligence
+robotics-learning
+nextjs
+tailwindcss
+docusaurus
+ai-agents
+qwen
+claude-code
+openai
+multi-agent-system
+robotics-education
