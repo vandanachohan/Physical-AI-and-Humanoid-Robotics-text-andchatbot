@@ -1,0 +1,710 @@
+Constitution
+Hackathon I: Create a Textbook for Teaching Physical AI & Humanoid Robotics
+
+Preamble
+This constitution establishes the guiding principles, academic mandate, and structural foundations for the textbook developed for the course in Physical AI and Humanoid Robotics. As global workforces transition toward hybrid collaboration between humans, intelligent agents, and robotic systems, the purpose of this textbook is to provide a rigorous, future-ready pedagogical framework that empowers learners to acquire the competencies required in emerging fields of embodied AI.
+
+Article I. Purpose
+
+1. To define a comprehensive, interdisciplinary curriculum that introduces students to the principles, methods, and applications of Physical AI and Humanoid Robotics.
+2. To integrate theoretical foundations with hands-on, project-driven learning that equips students to design, build, and deploy intelligent physical systems.
+3. To cultivate systems thinking, engineering literacy, and ethical awareness in the development of advanced robotic platforms and autonomous agents.
+4. To contribute to the global discourse on next-generation skills required in a world where human intelligence is augmented by artificial and robotic intelligence.
+
+Article II. Scope
+
+1. The textbook covers the conceptual, mathematical, computational, and mechanical fundamentals of Physical AI.
+2. Core domains include sensing, actuation, control systems, cognition, human-robot interaction, humanoid robotics, safety, alignment, and responsible innovation.
+3. Supplementary domains include applied robotics for industry, research methodologies, simulation workflows, and cross-disciplinary integrations with design, biology, and cognitive science.
+4. All content is designed to serve undergraduate, postgraduate, and professional learners seeking competency in robotics and embodied intelligence.
+
+Article III. Learning Framework
+
+1. Curriculum chapters shall be organized to progress from foundational concepts to advanced implementations.
+
+
+
+Prompt for /sp.specify - Create baseline specification
+
+/sp.specify
+Create a complete baseline specification for my project.
+
+Project context:
+I am building a textbook and documentation system for “Physical AI & Humanoid Robotics” using Docusaurus.
+I have already created a constitution for the project in `.specify/constitution.md`.
+I also have a `claude.md` file that describes project goals, capabilities, rules, and assistant behavior.
+
+Instructions:
+
+1. Read and incorporate the content of `.specify/constitution.md` and `claude.md`.
+2. Generate a baseline specification that defines:
+
+   * Project purpose and scope
+   * Documentation architecture for Docusaurus
+   * Content model for the textbook chapters
+   * High-level functional requirements
+   * Non-functional requirements
+   * Content taxonomy (courses, modules, robotics domains, AI domains)
+   * Folder structure for documentation and assets
+   * Style guidelines, tone, and formatting rules
+   * Contribution model (how content updates should be handled)
+   * Any workflows required for publishing, versioning, or deployment
+3. Ensure that the output is optimized for a Docusaurus project, including recommended directory hierarchy, sidebar structure, and MDX usage.
+4. Ensure the specification aligns strictly with the principles in `constitution.md`.
+
+Output:
+A complete, coherent, project-level baseline specification ready to use inside the `.specify` system and suitable for generating the corresponding Docusaurus documentation.
+
+This prompt ensures that you only describe everything once in claude.md, and the system uses it to generate the full project.
+You must read the full contents of my `claude.md` file and use it as the single source of truth for generating my entire documentation system. All project rules, goals, structure, tone, constraints, and outputs must follow what is written in `claude.md`.
+
+Using only the information defined in `claude.md`:
+
+1. Generate a complete Docusaurus documentation architecture for my project.
+2. Create the recommended folder structure, sidebar configuration, routing, and MDX templates.
+3. Prepare the content model for chapters, modules, robotics topics, and Physical AI concepts.
+4. Define workflows for building, writing, versioning, and publishing the documentation.
+5. Ensure the system can auto-generate pages in future steps by following the rules in `claude.md`.
+6. Integrate `.specify/constitution.md` as a governing document that constrains tone, mission, and educational philosophy.
+
+Your task:
+Produce a full Docusaurus-ready specification and scaffolding based entirely on my `claude.md` file, without requiring repeated instructions from me later.
+
+# Project Master Specification (claude.md)
+
+# Physical AI and Humanoid Robotics: Foundations, Engineering, and Intelligent Systems
+
+This file defines the authoritative, single-source specification for the entire Docusaurus-based textbook on Physical AI and Humanoid Robotics.
+All Spec-Kit Plus slash-commands, Claude Code, MCP server integrations, and code generation must rely solely on the requirements in this file and the governing `.specify/constitution.md`.
+
+The system must automatically produce the complete project:
+
+• `/sp.constitution`
+• `/sp.specify`
+• `/sp.plan`
+• `/sp.tasks`
+• `/sp.implement`
+
+No additional instructions from the user should be required.
+
+The final output must be a ready-to-deploy documentation system and codebase.
+
+---
+
+## 1. Core Objective
+
+Generate a complete, functional, production-grade educational platform for the textbook "Physical AI and Humanoid Robotics" including:
+
+• A Docusaurus v3 documentation site
+• All textbook chapters in MDX
+• Integrated RAG chatbot
+• Personalization features
+• Urdu translation support
+• Authentication
+• Sub-agents and reusable AI tools
+• Backend (FastAPI + Neon + Qdrant)
+• Frontend integration using OpenAI Agents / ChatKit
+
+The full system must scaffold automatically using Spec-Kit Plus and Claude Code.
+
+---
+
+## 2. System Behavior
+
+Spec-Kit Plus must:
+
+1. Read this file plus `.specify/constitution.md`.
+2. Generate a complete Docusaurus project.
+3. Auto-create all directories, files, MDX pages, sidebars, routing.
+4. Scaffold the backend server and integrate API endpoints.
+5. Produce all plans, tasks, diagrams, and implementation structure.
+6. Generate a fully connected MCP server supporting:
+
+   * RAG indexing
+   * Chatbot responses
+   * Personalized rewrites
+   * Urdu translation
+   * Sub-agent invocation
+7. Output a GitHub-ready repository with `deploy.yml` for GitHub Pages.
+
+The pipeline must be fully automatic after the initial slash command.
+
+---
+
+## 3. Functional Requirements
+
+### 3.1 Docusaurus Book Generation
+
+Claude Code must produce:
+
+• Docusaurus v3 project using Spec-Kit Plus template
+• Autogenerated sidebar
+• All chapters and subchapters
+• MDX placeholders for content
+• “Personalize Content” button
+• “Translate to Urdu” button
+• Integrated chatbot widget
+
+---
+
+### 3.2 RAG Chatbot Integration
+
+Backend:
+• FastAPI server
+• Neon Serverless Postgres (user profiles, metadata)
+• Qdrant Cloud (vector embeddings)
+• OpenAI embeddings + ChatCompletions API
+• Text chunking and citation-aware retrieval system
+
+Frontend:
+• Floating chatbot widget
+• Mode A: Ask questions about the entire book
+• Mode B: Ask questions restricted to user-selected text
+• Source citations displayed automatically
+
+---
+
+### 3.3 Authentication (Bonus but auto-included)
+
+Use BetterAuth.com with:
+• Signup page
+• Questionnaire about user's skill background
+• Store responses in Neon DB
+• Use responses to personalize chapters
+
+---
+
+### 3.4 Personalization
+
+Every chapter must include:
+• Personalize Content button
+• Endpoint call to rewrite blocks based on user profile
+• Dynamic rendering of beginner vs intermediate vs advanced sections
+
+---
+
+### 3.5 Urdu Translation
+
+Each chapter must contain a:
+• Translate to Urdu button
+• Urdu MDX variant generator
+• Toggle system between EN and UR
+
+---
+
+### 3.6 Sub-Agents and Reusable Intelligence
+
+Claude Code must generate sub-agents under `/agents/`:
+
+• GlossaryBuilder
+• QuizGenerator
+• SummaryWriter
+• CodeExplainer
+• RoboticsMathHelper
+• HardwareAdvisor
+
+These agents must be callable during writing or automatically during chapter generation.
+
+---
+
+## 4. Book Structure
+
+### Preface
+
+Introduction, goals, human-AI-robot collaboration, and using AI agents.
+
+### Part I: Foundations of Physical AI
+
+1. Introduction to Physical AI
+2. Robotics Fundamentals
+3. Computer Vision for Physical AI
+4. Machine Learning for Robotics
+
+### Part II: Humanoid Robotics Engineering
+
+5. Humanoid Architecture
+6. Locomotion and Balance
+7. Manipulation
+8. Perception Systems in Humanoids
+9. Motion Planning and Control
+
+### Part III: Intelligence Layer for Humanoids
+
+10. Natural Language for Humanoids
+11. Cognitive AI Models
+12. Human-Robot Interaction
+
+### Part IV: Building Physical AI Systems
+
+13. ROS2
+14. Embedded Systems
+15. Cloud Robotics
+
+### Part V: Future of Physical AI
+
+16. Applications
+17. Ethics and Safety
+18. Robotics Entrepreneurship
+
+### Appendices
+
+A: Mathematics for Robotics
+B: Datasheets and Standards
+C: Glossary
+D: Labs and Exercises
+
+---
+
+## 5. Output Requirements
+
+Spec-Kit Plus must produce:
+
+• `/sp.constitution` from constitution.md
+• `/sp.specify` baseline spec
+• `/sp.plan` implementation phases
+• `/sp.tasks` task breakdown
+• `/sp.implement` code generation
+
+At the end:
+
+• Full Docusaurus project
+• Full backend
+• Full RAG system
+• Full frontend and chatbot
+• Sub-agents
+• MCP server
+• GitHub deploy workflow
+• Book chapters in MDX
+• Everything ready for immediate build and deployment
+
+No missing components are allowed.
+
+---
+
+## 6. Final Rule
+
+After reading this file once, the system must generate the entire project automatically without additional user instructions.
+
+ prompt of Read CLAUDE.MD file 
+
+You must read the full contents of my `claude.md` file and treat it as the **single source of truth** for everything in this project. All rules, goals, structure, tone, constraints, workflows, and outputs must strictly follow what is defined in `claude.md`.
+
+Your objectives:
+
+1. **Docusaurus Project Generation**
+
+   * Generate a full **Docusaurus v3 documentation project** for my Physical AI & Humanoid Robotics textbook.
+   * Use the **Spec-Kit Plus template** as the baseline.
+   * Include all chapters, subchapters, and appendices exactly as described in `claude.md`.
+   * Create **MDX pages** with initial content placeholders for all topics.
+   * Integrate interactive elements like buttons for **personalization** and **Urdu translation**, exactly as described.
+
+2. **Folder Structure & Routing**
+
+   * Generate all folders and files needed for a fully functional Docusaurus book:
+
+     * `/docs` with chapter and module MDX files.
+     * `/sidebar.js` for sidebar configuration, reflecting all chapters in `claude.md`.
+     * `/src/components` for reusable UI elements (buttons, widgets, etc.).
+     * `/agents/` directory for subagents like `GlossaryBuilder`, `QuizGenerator`, etc.
+   * Define routing so all pages are properly linked in the sidebar and navigable.
+
+3. **Content Model & Scaffolding**
+
+   * Prepare content scaffolding for:
+
+     * Foundations of Physical AI (Chapters 1–4)
+     * Humanoid Robotics Engineering (Chapters 5–9)
+     * Intelligence Layer for Humanoids (Chapters 10–12)
+     * Building Physical AI Systems (Chapters 13–15)
+     * Future of Physical AI (Chapters 16–18)
+     * Appendices A–D
+   * Ensure each MDX page includes placeholders for topics, subtopics, and any special UI or interactive elements.
+
+4. **Workflows**
+
+   * Define processes for **writing, versioning, and publishing** content.
+   * Ensure that future pages can be auto-generated based on the same specification and subagent logic.
+   * Use `.specify/constitution.md` as the governing document for tone, educational philosophy, and pedagogical rules.
+
+5. **Integration & Automation**
+
+   * Prepare the system for:
+
+     * **RAG chatbot** integration with FastAPI, Neon Postgres, Qdrant Cloud, and OpenAI embeddings, as defined.
+     * Personalized content rewriting.
+     * Urdu translation toggles.
+     * Subagents for glossary, quizzes, summaries, code explanation, math helper, and hardware guidance.
+
+6. **Deliverable**
+
+   * A complete Docusaurus-ready project scaffold, fully aligned with `claude.md`.
+   * All chapters, sidebars, folders, MDX files, components, and workflows fully configured.
+   * The project should be immediately implementable and ready for content population and deployment to GitHub Pages.
+
+**Important:** Do not assume or add anything not explicitly defined in `claude.md`. Every file, folder, page, and workflow must strictly follow the instructions and structure provided there.
+
+End the generation by confirming:
+
+> “Full Docusaurus project scaffold for Physical AI & Humanoid Robotics is ready, based entirely on claude.md.”
+
+/sp.plan create implementation plan
+
+Prompt:
+
+You must create a **complete implementation plan** for generating the Physical AI & Humanoid Robotics textbook using Docusaurus v3, based entirely on the contents of `claude.md` and the guiding principles in `.specify/constitution.md`. Treat `claude.md` as the single source of truth.
+
+The plan should include:
+
+1. **Project Setup**
+
+   * Create the Docusaurus v3 project using Spec-Kit Plus.
+   * Define folder structure:
+
+     * `/docs` for MDX chapter pages
+     * `/sidebar.js` for the full sidebar
+     * `/src/components` for reusable UI elements
+     * `/agents/` for subagents (GlossaryBuilder, QuizGenerator, SummaryWriter, CodeExplainer, RoboticsMathHelper, HardwareAdvisor)
+   * Prepare routing and sidebar links.
+
+2. **Content Scaffolding**
+
+   * Scaffold MDX pages for all chapters, subchapters, and appendices listed in `claude.md`.
+   * Include placeholders for topics, interactive buttons (personalization, Urdu translation), and module content.
+
+3. **Interactive Features**
+
+   * Integrate floating RAG chatbot widget.
+   * Prepare endpoints and placeholders for FastAPI backend, Neon Postgres, Qdrant Cloud vector search, and OpenAI embeddings.
+   * Add sections for personalization, translation, and subagent usage.
+
+4. **Workflows**
+
+   * Define workflows for writing, versioning, reviewing, and publishing content.
+   * Ensure pages can be auto-generated in the future based on the same specification.
+
+5. **Integration**
+
+   * Ensure `.specify/constitution.md` is referenced for tone, educational philosophy, and pedagogical constraints.
+   * Include hooks for future RAG, personalization, and translation features.
+
+6. **Deliverables**
+
+   * A full, actionable plan listing all steps to scaffold the project.
+   * Tasks should be clear enough that `/sp.tasks` can convert them directly into executable actions.
+
+> Your output should be a **step-by-step implementation plan** that can be followed to fully realize the textbook project structure and content scaffolding as defined in `claude.md`. End the plan by confirming:
+> “Implementation plan for Physical AI & Humanoid Robotics textbook is ready.”
+
+
+
+
+/sp.tasks generate actionable tasks
+
+Prompt:
+
+Using the **implementation plan** created from `/sp.plan` and the full contents of `claude.md` as the single source of truth, generate a **comprehensive list of actionable tasks** for building the Physical AI & Humanoid Robotics textbook project in Docusaurus v3.
+
+The tasks should be:
+
+1. **Project Initialization**
+
+   * Create Docusaurus v3 project using Spec-Kit Plus.
+   * Initialize Git repository and configure GitHub Pages deployment.
+   * Set up `.specify/constitution.md` reference for tone and educational philosophy.
+
+2. **Folder & File Structure**
+
+   * Create `/docs` folder and subfolders for chapters, parts, and appendices.
+   * Generate `/sidebar.js` with all chapters and appendices linked.
+   * Create `/src/components` for reusable buttons and UI elements (personalization, Urdu translation).
+   * Create `/agents/` folder and scaffold subagents: GlossaryBuilder, QuizGenerator, SummaryWriter, CodeExplainer, RoboticsMathHelper, HardwareAdvisor.
+
+3. **Content Scaffolding**
+
+   * Create MDX pages for all chapters, subchapters, and appendices.
+   * Include placeholders for:
+
+     * Topics and subtopics
+     * Interactive buttons
+     * Module content
+     * Embedded RAG chatbot components
+   * Include navigation links and internal anchors as needed.
+
+4. **Interactive Features**
+
+   * Scaffold endpoints for FastAPI backend.
+   * Set up Neon Postgres for user metadata and profiles.
+   * Prepare Qdrant Cloud vector search integration.
+   * Create ChatKit or OpenAI Agents integration placeholders.
+
+5. **Automation & Workflows**
+
+   * Add tasks to implement auto-generation of future pages.
+   * Include workflow tasks for versioning, reviewing, and publishing content.
+   * Ensure tasks are compatible with `/sp.implement` for automated execution.
+
+6. **Deliverable Tasks**
+
+   * Each task should be discrete and actionable, such that executing them in sequence results in a fully scaffolded Docusaurus project ready for content population.
+   * End with a confirmation task:
+
+     > “All tasks generated. The project is ready for implementation.”
+
+> Output the tasks in a numbered list, clearly defining which folders, files, components, and integration points need to be created or configured.
+
+
+
+/sp.implement execute implementation
+
+Prompt:
+
+Using the **actionable tasks** generated by `/sp.tasks` and the full contents of `claude.md` as the single source of truth, **execute the full implementation** of the Physical AI & Humanoid Robotics textbook project.
+
+Requirements:
+
+1. **Project Scaffold**
+
+   * Create the Docusaurus v3 project using Spec-Kit Plus template.
+   * Initialize Git repository and configure GitHub Pages deployment.
+   * Reference `.specify/constitution.md` to enforce tone, pedagogy, and educational philosophy.
+
+2. **Folder & File Structure**
+
+   * Generate `/docs` folder with subfolders for all chapters, parts, and appendices.
+   * Create `/sidebar.js` linking all chapters and appendices exactly as defined.
+   * Create `/src/components` for UI elements (personalization buttons, Urdu translation toggles, RAG chatbot widgets).
+   * Create `/agents/` folder and scaffold subagents: GlossaryBuilder, QuizGenerator, SummaryWriter, CodeExplainer, RoboticsMathHelper, HardwareAdvisor.
+
+3. **Content Scaffolding**
+
+   * Generate MDX files for each chapter, subchapter, and appendix.
+   * Include placeholders for topics, interactive buttons, module content, and embedded RAG components.
+   * Ensure navigation links, internal anchors, and sidebar routing are correct.
+
+4. **Interactive Features**
+
+   * Scaffold endpoints for FastAPI backend.
+   * Configure Neon Postgres for user metadata and profiles.
+   * Prepare Qdrant Cloud vector search integration.
+   * Create ChatKit/OpenAI Agents integration placeholders for RAG chatbot.
+
+5. **Automation & Future Expansion**
+
+   * Implement tasks for auto-generating new pages in future.
+   * Include versioning, reviewing, and publishing workflows.
+   * Ensure project can scale with personalization, translation, and subagent modules.
+
+6. **Final Deliverable**
+
+   * A fully scaffolded, Docusaurus-ready textbook project.
+   * All folders, files, components, sidebar configuration, and interactive placeholders created.
+   * Ready for content population and deployment.
+   * End output with confirmation:
+
+     > “Full Docusaurus project scaffold for Physical AI & Humanoid Robotics textbook is ready, based entirely on claude.md.”
+
+
+
+
+/sp.plan create implementation plan
+
+Prompt:
+
+You must create a **complete step-by-step implementation plan** for generating the Physical AI & Humanoid Robotics textbook using Docusaurus v3, based entirely on the contents of `claude.md` and the guiding principles in `.specify/constitution.md`. Treat `claude.md` as the **single source of truth** for all project rules, structure, content, tone, and constraints.
+
+The plan must include the following sections:
+
+1. **Project Setup**
+
+   * Create the Docusaurus v3 project using the Spec-Kit Plus template.
+   * Define the folder structure:
+
+     * `/docs` for MDX chapter pages.
+     * `/sidebar.js` for the complete sidebar.
+     * `/src/components` for reusable UI elements.
+     * `/agents/` for subagents (GlossaryBuilder, QuizGenerator, SummaryWriter, CodeExplainer, RoboticsMathHelper, HardwareAdvisor).
+   * Prepare routing and sidebar links.
+
+2. **Content Scaffolding**
+
+   * Scaffold MDX pages for all chapters, subchapters, and appendices as defined in `claude.md`.
+   * Include placeholders for:
+
+     * Topics and subtopics.
+     * Interactive buttons (personalization, Urdu translation).
+     * Module content and learning objectives.
+
+3. **Interactive Features**
+
+   * Integrate a floating RAG chatbot widget.
+   * Prepare endpoints and placeholders for FastAPI backend, Neon Postgres, Qdrant Cloud vector search, and OpenAI embeddings.
+   * Include hooks for personalization, translation, and subagent features.
+
+4. **Workflows**
+
+   * Define workflows for writing, versioning, reviewing, and publishing content.
+   * Ensure pages and modules can be auto-generated in the future according to the same specifications.
+
+5. **Integration**
+
+   * Reference `.specify/constitution.md` for tone, educational philosophy, and pedagogical constraints.
+   * Include integration points for future RAG, personalization, translation, and subagent modules.
+
+6. **Deliverables**
+
+   * A full, actionable plan listing all steps to scaffold the project.
+   * Tasks should be clear and structured enough that `/sp.tasks` can convert them directly into executable actions.
+   * Include checkpoints for review and validation of generated project components.
+
+> The output must be a **step-by-step implementation plan** that can be followed to fully realize the textbook project structure and content scaffolding as defined in `claude.md`.
+> End the plan with the confirmation:
+> “Implementation plan for Physical AI & Humanoid Robotics textbook is ready.”
+
+
+
+
+/sp.implement execute implementation
+
+Prompt:
+
+Using the **actionable tasks** generated by `/sp.tasks` and the full contents of `claude.md` as the single source of truth, **execute the full implementation** of the Physical AI & Humanoid Robotics textbook project.
+
+Requirements:
+
+1. **Project Scaffold**
+
+   * Create the Docusaurus v3 project using Spec-Kit Plus template.
+   * Initialize Git repository and configure GitHub Pages deployment.
+   * Reference `.specify/constitution.md` to enforce tone, pedagogy, and educational philosophy.
+
+2. **Folder & File Structure**
+
+   * Generate `/docs` folder with subfolders for all chapters, parts, and appendices.
+   * Create `/sidebar.js` linking all chapters and appendices exactly as defined.
+   * Create `/src/components` for UI elements (personalization buttons, Urdu translation toggles, RAG chatbot widgets).
+   * Create `/agents/` folder and scaffold subagents: GlossaryBuilder, QuizGenerator, SummaryWriter, CodeExplainer, RoboticsMathHelper, HardwareAdvisor.
+
+3. **Content Scaffolding**
+
+   * Generate MDX files for each chapter, subchapter, and appendix.
+   * Include placeholders for topics, interactive buttons, module content, and embedded RAG components.
+   * Ensure navigation links, internal anchors, and sidebar routing are correct.
+
+4. **Interactive Features**
+
+   * Scaffold endpoints for FastAPI backend.
+   * Configure Neon Postgres for user metadata and profiles.
+   * Prepare Qdrant Cloud vector search integration.
+   * Create ChatKit/OpenAI Agents integration placeholders for RAG chatbot.
+
+5. **Automation & Future Expansion**
+
+   * Implement tasks for auto-generating new pages in future.
+   * Include versioning, reviewing, and publishing workflows.
+   * Ensure project can scale with personalization, translation, and subagent modules.
+
+6. **Final Deliverable**
+
+   * A fully scaffolded, Docusaurus-ready textbook project.
+   * All folders, files, components, sidebar configuration, and interactive placeholders created.
+   * Ready for content population and deployment.
+   * End output with confirmation:
+
+     > “Full Docusaurus project scaffold for Physical AI & Humanoid Robotics textbook is ready, based entirely on claude.md.”
+
+
+/sp.plan create implementation plan
+
+Prompt:
+
+You must create a **complete step-by-step implementation plan** for generating the Physical AI & Humanoid Robotics textbook using Docusaurus v3, based entirely on the contents of `claude.md` and the guiding principles in `.specify/constitution.md`. Treat `claude.md` as the **single source of truth** for all project rules, structure, content, tone, and constraints.
+
+The plan must include the following sections:
+
+1. **Project Setup**
+
+   * Create the Docusaurus v3 project using the Spec-Kit Plus template.
+   * Define the folder structure:
+
+     * `/docs` for MDX chapter pages.
+     * `/sidebar.js` for the complete sidebar.
+     * `/src/components` for reusable UI elements.
+     * `/agents/` for subagents (GlossaryBuilder, QuizGenerator, SummaryWriter, CodeExplainer, RoboticsMathHelper, HardwareAdvisor).
+   * Prepare routing and sidebar links.
+
+2. **Content Scaffolding**
+
+   * Scaffold MDX pages for all chapters, subchapters, and appendices as defined in `claude.md`.
+   * Include placeholders for:
+
+     * Topics and subtopics.
+     * Interactive buttons (personalization, Urdu translation).
+     * Module content and learning objectives.
+
+3. **Interactive Features**
+
+   * Integrate a floating RAG chatbot widget.
+   * Prepare endpoints and placeholders for FastAPI backend, Neon Postgres, Qdrant Cloud vector search, and OpenAI embeddings.
+   * Include hooks for personalization, translation, and subagent features.
+
+4. **Workflows**
+
+   * Define workflows for writing, versioning, reviewing, and publishing content.
+   * Ensure pages and modules can be auto-generated in the future according to the same specifications.
+
+5. **Integration**
+
+   * Reference `.specify/constitution.md` for tone, educational philosophy, and pedagogical constraints.
+   * Include integration points for future RAG, personalization, translation, and subagent modules.
+
+6. **Deliverables**
+
+   * A full, actionable plan listing all steps to scaffold the project.
+   * Tasks should be clear and structured enough that `/sp.tasks` can convert them directly into executable actions.
+   * Include checkpoints for review and validation of generated project components.
+
+> The output must be a **step-by-step implementation plan** that can be followed to fully realize the textbook project structure and content scaffolding as defined in `claude.md`.
+> End the plan with the confirmation:
+> “Implementation plan for Physical AI & Humanoid Robotics textbook is ready.”
+
+You create chatbox intelligent AI tutor for the textbook "Physical AI & Humanoid Robotics."  
+Your goal is to help students and readers understand the concepts in the book clearly and interactively.
+
+Rules for your behavior:
+
+1. Always answer questions **based on the book content only**.
+2. Give **step-by-step explanations**, breaking complex ideas into simple parts.
+3. Provide **examples, exercises, and thought experiments** for better understanding.
+4. Translate complex terms or sentences into **Urdu** in parentheses.
+5. Reference the **chapter or section** of the book when giving answers.
+6. Ask a clarifying question if the user's question is vague before answering.
+7. You may offer additional tips or insights to help the reader understand practical applications.
+
+**User interaction examples:**
+
+User: "How do humanoid robots balance on two legs?"  
+AI Tutor:  
+"Humanoid robots maintain balance using sensors and control algorithms. Step-by-step:  
+1. **Sensors** (گیروسکوپ اور ایکسیلرومیٹر) detect tilt and orientation.  
+2. **Control algorithms** calculate corrective movements.  
+3. **Actuators** adjust joints to keep the robot upright.  
+Example: A bipedal robot adjusts its ankle motors in real-time while walking on uneven terrain.  
+Exercise: Imagine a robot on a slope. Which sensors and motors would you use to keep it upright?  
+Reference: Chapter 4 – Sensors & Actuators"
+
+User: "Translate this explanation to Urdu"  
+AI Tutor:  
+"ہیومینوئڈ روبوٹ توازن قائم رکھنے کے لیے سینسرز جیسے کہ گیروسکوپ اور ایکسیلرومیٹر استعمال کرتے ہیں۔  
+1. سینسر جھکاؤ اور رخ کو محسوس کرتے ہیں۔  
+2. کنٹرول الگورتھمز اصلاحی حرکات کا حساب لگاتے ہیں۔  
+3. ایکچیویٹر جوڑوں کو ایڈجسٹ کرتے ہیں تاکہ روبوٹ نہ گرے۔  
+مثال: ایک دو پیر والا روبوٹ جو غیر ہموار زمین پر چل رہا ہے اپنے ٹخنے کے موٹرز کو ریئل ٹائم میں ایڈجسٹ کرتا ہے۔"
+
+** task for chatboc ai assitent:** Always act as a **helpful, interactive, and educational AI tutor**, guiding the reader to understand both theory and practical applications from the book. 
+
+
+
+
+
+

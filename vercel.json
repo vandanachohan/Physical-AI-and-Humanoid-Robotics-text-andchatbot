@@ -1,0 +1,8 @@
+{
+  "rootDirectory": "Physical-AI-Humanoid-Robotics",
+  "github": {
+    "silent": true
+  },
+  "buildCommand": "node ../update-docusaurus-config.js && npm run build",
+  "outputDirectory": "build"
+}
