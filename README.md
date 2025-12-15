@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 📘 Physical AI & Humanoid Robotics
+=======
+ 📘 Physical AI & Humanoid Robotics
+>>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
 AI-Native Textbook • Multi-Agent System • Robotics Learning Platform
 
 A modern, AI-powered textbook project focused on Physical AI, Humanoid Robotics, and Embodied Intelligence.
@@ -6,10 +10,13 @@ This repository includes the complete book structure, chapters, diagrams, agent 
 
 Built with: Next.js, TailwindCSS, Docusaurus, Claude Code, Qwen, and OpenAI Agents.
 
+<<<<<<< HEAD
 ✨ New: Beautiful Baby Pink Book Theme!
 We've added a delightful baby pink themed book website for an enhanced reading experience.
 Visit the pretty pink book site at /baby-pink-book or click the "Visit Pretty Pink Book Site" button on the homepage.
 
+=======
+>>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
 🚀 Overview
 
 The Physical AI & Humanoid Robotics Textbook Project is a fully automated learning system designed to help students master:
@@ -71,10 +78,13 @@ Code examples, simulations, and hardware notes.
 
 A modern, responsive website showcasing the entire textbook.
 
+<<<<<<< HEAD
 🔹 6. Beautiful Baby Pink Theme
 
 Aesthetic baby pink themed book website for a delightful reading experience.
 
+=======
+>>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
 📘 Chapters Included
 
 ✔ Introduction to Physical AI
@@ -97,6 +107,7 @@ TypeScript — core codebase
 GitHub Actions — automation
 
 🧪 How to Run
+<<<<<<< HEAD
 # Install dependencies for both backend and frontend
 npm install
 
@@ -123,6 +134,16 @@ https://vandanachohan.github.io/Physical-AI-Humanoid-Robotics/
 
 Note: The site will be available after the GitHub Actions workflow completes.
 If the site is not loading, check the Actions tab for any deployment errors.
+=======
+# Install dependencies
+npm install
+
+# Start Docusaurus docs
+npm run start
+
+# Start Next.js website
+npm run dev
+>>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
 
 🤝 Contributing
 
@@ -158,4 +179,8 @@ qwen
 claude-code
 openai
 multi-agent-system
+<<<<<<< HEAD
 robotics-education
+=======
+robotics-education
+>>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
