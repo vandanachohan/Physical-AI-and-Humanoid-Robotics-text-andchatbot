@@ -169,16 +169,11 @@ export async function getStaticProps({ params }) {
 
 // This function gets called at build time to determine which pages to pre-render
 export async function getStaticPaths() {
-  // Define the tutorial IDs that should be pre-rendered
-  const paths = [
-    { params: { id: 'robot-sensors' } },
-    { params: { id: 'actuator-control' } },
-    { params: { id: 'motion-planning' } }
-  ];
-
+  // For development, allow fallback to generate pages on-demand
+  // In production, you would pre-generate specific paths
   return {
-    paths,
-    fallback: true // Allow other IDs to be generated at request time
+    paths: [], // Initially empty to allow all paths during development
+    fallback: 'blocking' // Generate pages on-demand and cache them
   };
 }
 

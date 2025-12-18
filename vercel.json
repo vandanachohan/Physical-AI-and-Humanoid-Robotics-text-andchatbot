@@ -1,8 +1,36 @@
 {
-  "rootDirectory": "Physical-AI-Humanoid-Robotics",
-  "github": {
-    "silent": true
-  },
-  "buildCommand": "node ../update-docusaurus-config.js && npm run build",
-  "outputDirectory": "build"
+  "version": 2,
+  "name": "physical-ai-humanoid-robotics-textbook",
+  "builds": [
+    {
+      "src": "Physical-AI-Humanoid-Robotics/**/*",
+      "use": "@vercel/static",
+      "config": {
+        "distDir": "build"
+      }
+    },
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/Physical-AI-Humanoid-Robotics/build/index.html",
+      "headers": {
+        "Cache-Control": "public, max-age=31556952, immutable"
+      }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/Physical-AI-Humanoid-Robotics/build/index.html"
+    }
+  ]
 }
