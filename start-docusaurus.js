@@ -1,8 +1,11 @@
 const { spawn } = require('child_process');
 const path = require('path');
+const { dirname } = require('path');
+const { fileURLToPath } = require('url');
 
-// Change to the project directory
-const projectDir = 'E:\\Hackatone-1- Physical AI & Humanoid Robotics\\Physical-AI-Humanoid-Robotics';
+// Get the current directory based on this file's location
+const currentDir = __dirname; // Get the directory of this script
+const projectDir = path.join(currentDir, 'Physical-AI-Humanoid-Robotics');
 
 console.log('Starting Docusaurus development server...');
 console.log(`Project directory: ${projectDir}`);

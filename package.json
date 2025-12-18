@@ -1,27 +1,18 @@
 {
   "name": "book-backend",
   "version": "1.0.0",
-<<<<<<< HEAD
   "description": "Backend for Physical AI & Humanoid Robotics textbook application",
-=======
-  "description": "Backend for book management application",
->>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-<<<<<<< HEAD
     "test": "jest",
     "docusaurus": "cd Physical-AI-Humanoid-Robotics && npm run start",
     "both": "concurrently \"npm run dev\" \"cd Physical-AI-Humanoid-Robotics && npm run start\""
-=======
-    "test": "jest"
->>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
   },
   "keywords": [
     "book",
     "backend",
-<<<<<<< HEAD
     "api",
     "physical-ai",
     "humanoid-robotics",
@@ -31,21 +22,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/user-name/Physical-AI-Humanoid-Robotics.git"
+    "url": "https://github.com/vandanachohan/Physical-AI-Humanoid-Robotics.git"
   },
   "dependencies": {
-    "concurrently": "^8.2.0",
-=======
-    "api"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
-  "dependencies": {
->>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "mongoose": "^7.5.0"
+    "mongoose": "^7.5.0",
+    "concurrently": "^8.2.0"
   },
   "devDependencies": {
     "@docusaurus/tsconfig": "^3.9.2",

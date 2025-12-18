@@ -1,23 +1,12 @@
-<<<<<<< HEAD
+
 📘 Physical AI & Humanoid Robotics
-=======
- 📘 Physical AI & Humanoid Robotics
->>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
+
 AI-Native Textbook • Multi-Agent System • Robotics Learning Platform
 
 A modern, AI-powered textbook project focused on Physical AI, Humanoid Robotics, and Embodied Intelligence.
 This repository includes the complete book structure, chapters, diagrams, agent workflows, tutorials, and automation tools used to build and maintain the textbook.
 
 Built with: Next.js, TailwindCSS, Docusaurus, Claude Code, Qwen, and OpenAI Agents.
-
-<<<<<<< HEAD
-✨ New: Beautiful Baby Pink Book Theme!
-We've added a delightful baby pink themed book website for an enhanced reading experience.
-Visit the pretty pink book site at /baby-pink-book or click the "Visit Pretty Pink Book Site" button on the homepage.
-
-=======
->>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
-🚀 Overview
 
 The Physical AI & Humanoid Robotics Textbook Project is a fully automated learning system designed to help students master:
 
@@ -76,15 +65,6 @@ Code examples, simulations, and hardware notes.
 
 🔹 5. Next.js Website
 
-A modern, responsive website showcasing the entire textbook.
-
-<<<<<<< HEAD
-🔹 6. Beautiful Baby Pink Theme
-
-Aesthetic baby pink themed book website for a delightful reading experience.
-
-=======
->>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
 📘 Chapters Included
 
 ✔ Introduction to Physical AI
@@ -106,24 +86,6 @@ TypeScript — core codebase
 
 GitHub Actions — automation
 
-🧪 How to Run
-<<<<<<< HEAD
-# Install dependencies for both backend and frontend
-npm install
-
-# For the backend server:
-npm run start  # Runs the Express.js server on port 3000
-
-# For the Docusaurus textbook frontend (in a separate terminal):
-cd Physical-AI-Humanoid-Robotics
-npm install
-npm run start  # Runs the Docusaurus site on port 3000
-
-# To run both simultaneously, you'll need to change one of the ports
-# Or use a process manager like concurrently:
-
-# Install concurrently globally
-npm install -g concurrently
 
 # Run both at the same time (in root directory)
 concurrently "npm run dev" "cd Physical-AI-Humanoid-Robotics && npm run start"
@@ -131,56 +93,7 @@ concurrently "npm run dev" "cd Physical-AI-Humanoid-Robotics && npm run start"
 🌐 View the Textbook Online
 The textbook is deployed to GitHub Pages and can be viewed at:
 https://vandanachohan.github.io/Physical-AI-Humanoid-Robotics/
+![chatbot](image.png)
 
-Note: The site will be available after the GitHub Actions workflow completes.
-If the site is not loading, check the Actions tab for any deployment errors.
-=======
-# Install dependencies
-npm install
-
-# Start Docusaurus docs
-npm run start
-
-# Start Next.js website
-npm run dev
->>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
-
-🤝 Contributing
-
-Contributions are welcome!
-You can submit:
-
-New chapters
-
-Fixes or improvements
-
-Diagrams and illustrations
-
-Tutorials/Examples
-
-Please open an Issue before starting major changes.
-
-📜 License
-
-This project is licensed under the MIT License.
-
-🔖 GitHub Tags (Copy & Paste)
-physical-ai
-humanoid-robotics
-robotics-textbook
-ai-textbook
-embodied-intelligence
-robotics-learning
-nextjs
-tailwindcss
-docusaurus
-ai-agents
-qwen
-claude-code
-openai
-multi-agent-system
-<<<<<<< HEAD
-robotics-education
-=======
-robotics-education
->>>>>>> 652eb36db684b6775c4c436d46e9e722cca392a0
+video tutorials/Examples
+<video controls src="Physical AI & Humanoid Robotics - Textbook - Personal - Microsoft​ Edge 2025-12-18 13-13-57.mp4" title="book"></video>

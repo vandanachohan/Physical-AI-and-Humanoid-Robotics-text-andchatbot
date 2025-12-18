@@ -1,0 +1,88 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #332a52; /* Main theme purple */
+  --ifm-color-primary-dark: #1c1638; /* Darker purple */
+  --ifm-color-primary-darker: #0f0c1f; /* Even darker purple */
+  --ifm-color-primary-darkest: #0a0715; /* Darkest purple */
+  --ifm-color-primary-light: #4a4175; /* Lighter purple */
+  --ifm-color-primary-lighter: #625a9a; /* Even lighter purple */
+  --ifm-color-primary-lightest: #7a74bf; /* Lightest purple */
+  --ifm-color-secondary: #880e4f; /* Complementary pink */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #8a7dc4;
+  --ifm-color-primary-dark: #7262b4;
+  --ifm-color-primary-darker: #5b48a4;
+  --ifm-color-primary-darkest: #453094;
+  --ifm-color-primary-light: #a498d4;
+  --ifm-color-primary-lighter: #bdb2e4;
+  --ifm-color-primary-lightest: #d6cbf4;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Additional custom styles for the Physical AI & Robotics textbook */
+.header-github-link:hover {
+  opacity: 0.6;
+}
+
+.header-github-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.09.682-.218.682-.485 0-.236-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.089 2.91.833.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z'/%3E%3C/svg%3E") no-repeat;
+}
+
+html[data-theme='dark'] .header-github-link::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.09.682-.218.682-.485 0-.236-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.089 2.91.833.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z'/%3E%3C/svg%3E") no-repeat;
+}
+
+/* Ensure consistent spacing and layout */
+main {
+  padding-top: 4rem;
+}
+
+/* Custom styling for content sections */
+.hero--primary {
+  background: linear-gradient(135deg, #332a52 0%, #4a4175 100%);
+  color: white;
+  padding: 4rem 0;
+}
+
+/* Custom link styling */
+a {
+  color: #332a52;
+}
+
+[data-theme='dark'] a {
+  color: #a498d4;
+}
+
+/* Styling for code blocks */
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+/* Button styling */
+.button--primary {
+  background-color: #332a52;
+  border-color: #332a52;
+}
+
+.button--primary:hover {
+  background-color: #4a4175;
+  border-color: #4a4175;
+}

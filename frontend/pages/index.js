@@ -76,22 +76,6 @@ export default function Home() {
         </div>
 
         <ContactSection />
-
-        {/* Baby Pink Book Theme Section */}
-        <section className="py-16" style={{ backgroundColor: 'var(--background-color)' }}>
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6" style={{ color: 'var(--text-primary)' }}>Looking for a Beautiful Book Experience?</h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
-              Discover our pretty baby pink themed book website with a delightful reading experience
-            </p>
-            <Link
-              href="/baby-pink-book"
-              className="inline-block bg-[#ec407a] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#d81b60] transition duration-300 shadow-lg hover:shadow-xl"
-            >
-              Visit Pretty Pink Book Site
-            </Link>
-          </div>
-        </section>
       </MainLayout>
     </>
   );

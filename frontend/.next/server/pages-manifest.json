@@ -2,6 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/tutorials": "pages/tutorials.js",
-  "/": "pages/index.js"
+  "/": "pages/index.js",
+  "/404": "pages/404.js",
+  "/ai-tutor": "pages/ai-tutor.js"
 }
