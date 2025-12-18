@@ -17,8 +17,8 @@ const config: Config = {
   // Set the production url of your site here
   url: 'https://vandanachohan.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Physical-AI-Humanoid-Robotics/',
+  // For GitHub pages deployment from docs folder
+  baseUrl: '/Physical-AI-and-Humanoid-Robotics-text-andchatbot/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
