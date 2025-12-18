@@ -96,4 +96,6 @@ https://vandanachohan.github.io/Physical-AI-Humanoid-Robotics/
 ![chatbot](image.png)
 
 video tutorials/Examples
+
+ 
 <video controls src="Physical AI & Humanoid Robotics - Textbook - Personal - Microsoft​ Edge 2025-12-18 13-13-57.mp4" title="book"></video>
