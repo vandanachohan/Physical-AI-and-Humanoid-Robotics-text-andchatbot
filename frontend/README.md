@@ -1,68 +1,47 @@
-# Bookstore Frontend
+# Physical AI & Humanoid Robotics Textbook
 
-A React-based frontend application for the Bookstore API with full CRUD functionality.
+This is a complete textbook website on Physical AI & Humanoid Robotics with integrated AI tutoring capabilities.
 
 ## Features
 
-- View all books in a responsive grid layout
-- Create new books with form validation
-- Edit existing books
-- Delete books
-- View detailed information for each book
-- Responsive design using Bootstrap
-- Form validation for book inputs
-- React Router for navigation
+- Interactive textbook with 20+ chapters on Physical AI & Robotics
+- AI-powered tutoring system with contextual responses
+- Responsive design for all device sizes
+- Bilingual support (English and Urdu)
+- Modern UI with Tailwind CSS styling
 
-## Prerequisites
+## Tech Stack
 
-- Node.js (v14 or higher)
-- The backend API server running on `http://localhost:3000` (or configured endpoint)
+- Next.js 14
+- Tailwind CSS
+- MDX for dynamic content
+- React for interactive components
+- Node.js backend API
 
-## Installation
+## Getting Started
 
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
+First, install the dependencies:
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Create a `.env` file in the frontend directory (optional):
-   ```env
-   REACT_APP_API_URL=http://localhost:3000/api
-   ```
-
-## Running the Application
-
-### Development Mode
 ```bash
-npm start
-```
-The application will be available at `http://localhost:3001` (or another available port).
-
-### Production Build
-```bash
-npm run build
+npm install
 ```
 
-## API Integration
+Then, run the development server:
 
-The frontend connects to the backend API at `http://localhost:3000/api` by default. You can change this by setting the `REACT_APP_API_URL` environment variable.
+```bash
+npm run dev
+```
 
-## Available Pages
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- `/` or `/books` - Book list view
-- `/books/new` - Create new book form
-- `/books/:id` - View book details
-- `/books/:id/edit` - Edit book form
+## Project Structure
 
-## Components
+- `pages/` - Next.js pages including index, textbook chapters, and AI tutor
+- `components/` - Reusable React components for layout, chatbot, etc.
+- `styles/` - Global styles and Tailwind configuration
+- `public/` - Static assets like images and favicon
+- `content/` - MDX files for textbook content
 
-- `Header.js` - Navigation header
-- `BookList.js` - Displays all books in a grid
-- `BookForm.js` - Form for creating and editing books with validation
-- `BookDetail.js` - Detailed view of a single book
-- `api.js` - API service layer using Axios
+## API Routes
+
+- `/api/search` - Search textbook content for AI tutoring

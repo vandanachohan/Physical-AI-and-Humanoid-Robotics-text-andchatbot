@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import TextbookLayout from '../../components/TextbookLayout';
-import ChapterContent from '../../components/ChapterContent';
+import TextbookLayout from '../../../components/TextbookLayout';
+import ChapterContent from '../../../components/ChapterContent';
 
 // Define all chapters with their content
 const chaptersData = [
@@ -461,7 +461,20 @@ const ChapterPage = ({ id }) => {
   );
 };
 
-export async function getServerSideProps({ params }) {
+// For static export, we need to define all possible paths
+export async function getStaticPaths() {
+  // Generate paths for chapters 1 through 20
+  const paths = Array.from({ length: 20 }, (_, i) => ({
+    params: { id: (i + 1).toString() }
+  }));
+
+  return {
+    paths,
+    fallback: false // Don't generate any other routes at runtime
+  };
+}
+
+export async function getStaticProps({ params }) {
   return {
     props: {
       id: params.id

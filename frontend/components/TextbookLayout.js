@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import TextbookSidebar from '../../components/TextbookSidebar';
-import FixedAIChatbot from '../../components/FixedAIChatbot';
+import TextbookSidebar from './TextbookSidebar';
+import FixedAIChatbot from './FixedAIChatbot';
 
 const TextbookLayout = ({ children, currentChapter, prevChapter, nextChapter }) => {
   return (
