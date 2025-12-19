@@ -3,25 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import MainLayout from '../../components/MainLayout';
 
-const TutorialsPage = () => {
-  const tutorials = [
-    {
-      id: 'robot-sensors',
-      title: 'Understanding Robot Sensors',
-      description: 'Deep dive into various sensors used in humanoid robotics - cameras, gyroscopes, accelerometers, and more.',
-    },
-    {
-      id: 'actuator-control',
-      title: 'Actuator Control Systems',
-      description: 'Learn how to control robotic actuators for precise movement and interaction with the environment.',
-    },
-    {
-      id: 'motion-planning',
-      title: 'Motion Planning Algorithms',
-      description: 'Explore path planning and trajectory generation for humanoid robots in complex environments.',
-    }
-  ];
-
+const TutorialsPage = ({ tutorials }) => {
   return (
     <>
       <Head>
@@ -38,7 +20,7 @@ const TutorialsPage = () => {
               Learn about key concepts in Physical AI and Humanoid Robotics with step-by-step guides
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tutorials.map((tutorial) => (
               <a
@@ -52,7 +34,7 @@ const TutorialsPage = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-800">{tutorial.title}</h3>
-                <p className="text-gray-600 mb-4">{tutorial.description}</p>
+                <p className="text-gray-600 mb-4">{tutorial.description || 'Learn more about this topic'}</p>
                 <span className="inline-flex items-center text-[#332a52] font-semibold">
                   Start Tutorial
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -67,5 +49,46 @@ const TutorialsPage = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const fs = require('fs');
+  const path = require('path');
+  const matter = require('gray-matter');
+
+  const tutorialsDirectory = path.join(process.cwd(), 'content', 'tutorials');
+
+  if (!fs.existsSync(tutorialsDirectory)) {
+    return {
+      props: {
+        tutorials: []
+      }
+    };
+  }
+
+  const tutorialFiles = fs.readdirSync(tutorialsDirectory);
+
+  const tutorials = tutorialFiles
+    .filter(file => file.endsWith('.md') || file.endsWith('.mdx'))
+    .map(file => {
+      const filePath = path.join(tutorialsDirectory, file);
+      const fileContents = fs.readFileSync(filePath, 'utf8');
+      const { data } = matter(fileContents);
+
+      // Extract ID from filename (without extension)
+      const id = file.replace('.md', '').replace('.mdx', '');
+
+      return {
+        id,
+        title: data.title || id,
+        description: data.description || data.excerpt || 'Learn more about this topic'
+      };
+    });
+
+  return {
+    props: {
+      tutorials
+    }
+  };
+}
 
 export default TutorialsPage;

@@ -1,157 +1,82 @@
 // pages/tutorials/[id].js
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import MainLayout from '../../components/MainLayout';
 
-const TutorialPage = ({ tutorialId }) => {
-  const [tutorial, setTutorial] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // In a real app, this would fetch from an API
-    // For now, we'll use sample data
-    const fetchTutorial = async () => {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 500));
-
-      const sampleTutorials = {
-        'robot-sensors': {
-          id: 'robot-sensors',
-          title: 'Understanding Robot Sensors',
-          content: `## Understanding Robot Sensors
-
-### Overview
-Sensors in robotics function similarly to human senses, providing the robot with information about its environment and internal state. Common sensors include cameras, microphones, accelerometers, gyroscopes, force sensors, and tactile sensors.
-
-### Types of Sensors
-1. **Proprioceptive sensors** - measure internal states like joint angles and motor position
-2. **Exteroceptive sensors** - perceive external environment, such as cameras for vision and microphones for sound
-3. **Force/torque sensors** - measure interaction forces with objects and environment
-
-### Practical Application
-A humanoid robot uses its camera (vision sensor) to recognize objects and its tactile sensors in fingertips to grasp objects with appropriate force.
-
-### Exercise
-Design a simple sensing system for a robot navigating a room. What combination of sensors would you use and why?`,
-        },
-        'actuator-control': {
-          id: 'actuator-control',
-          title: 'Actuator Control Systems',
-          content: `## Actuator Control Systems
-
-### Overview
-Actuators are components that enable robots to move and interact with their environment. They are essentially the "muscles" of a robot, converting energy (usually electrical) into mechanical motion.
-
-### Types of Actuators
-1. **Electric motors** - most common in humanoid robots due to their precision and controllability
-2. **Servo motors** - provide precise angular control for joint movements
-3. **Linear actuators** - create straight-line motion for specific applications
-
-### Control Mechanisms
-Control systems use feedback loops to ensure actuators move precisely as commanded. PID controllers are commonly used for this purpose.
-
-### Exercise
-Consider how a robot arm picks up a delicate object. What type of actuators would allow fine control of grip strength?`,
-        },
-        'motion-planning': {
-          id: 'motion-planning',
-          title: 'Motion Planning Algorithms',
-          content: `## Motion Planning Algorithms
-
-### Overview
-Motion planning in robotics involves determining a sequence of movements to achieve a goal while avoiding obstacles.
-
-### Key Steps
-1. **Path planning** - Calculate a geometric route from start to goal
-2. **Trajectory planning** - Add timing and kinematic constraints to the path
-3. **Control execution** - Send commands to actuators to follow the planned trajectory
-
-### Example Application
-A humanoid robot planning to step over an obstacle calculates the required leg movement trajectory to avoid collision while maintaining balance.
-
-### Exercise
-Think about planning a path for a robot arm to move from point A to point B without hitting any obstacles in a cluttered workspace.`,
-        }
-      };
-
-      const foundTutorial = sampleTutorials[tutorialId] || {
-        id: tutorialId,
-        title: 'Tutorial Not Found',
-        content: `Sorry, we couldn't find a tutorial with the ID: ${tutorialId}`
-      };
-
-      setTutorial(foundTutorial);
-      setLoading(false);
-    };
-
-    fetchTutorial();
-  }, [tutorialId]);
+const TutorialPage = ({ tutorialData, tutorialId }) => {
+  if (!tutorialData) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-800 mb-4">Tutorial Not Found</h1>
+          <p className="text-gray-600 mb-4">The tutorial you're looking for doesn't exist.</p>
+          <a href="/tutorials" className="px-4 py-2 bg-[#332a52] text-white rounded-lg hover:bg-[#4f46e5] transition-colors">
+            Back to Tutorials
+          </a>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
       <Head>
-        <title>{tutorial?.title || 'Tutorial'} - Physical AI & Humanoid Robotics</title>
-        <meta name="description" content={`Learn about ${tutorial?.title || 'robotics tutorials'}`} />
+        <title>{tutorialData.title || 'Tutorial'} - Physical AI & Humanoid Robotics</title>
+        <meta name="description" content={`Learn about ${tutorialData.title || 'robotics tutorials'}`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <MainLayout>
         <div className="container mx-auto px-4 py-8 max-w-4xl">
-          {loading ? (
-            <div className="flex justify-center items-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#332a52]"></div>
-            </div>
-          ) : (
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h1 className="text-3xl font-bold mb-6 text-[#332a52]">{tutorial?.title}</h1>
-              <div className="prose max-w-none text-gray-700">
-                {tutorial?.content ? (
-                  tutorial.content.split('\n\n').map((paragraph, index) => {
-                    if (paragraph.startsWith('## ')) {
-                      return <h2 key={index} className="text-2xl font-semibold mt-8 mb-4 text-[#332a52]">{paragraph.substring(3)}</h2>;
-                    } else if (paragraph.startsWith('### ')) {
-                      return <h3 key={index} className="text-xl font-semibold mt-6 mb-3 text-[#5a4e7d]">{paragraph.substring(4)}</h3>;
-                    } else if (paragraph.startsWith('1. ') || paragraph.startsWith('2. ') || paragraph.startsWith('3. ') || paragraph.startsWith('4. ') || paragraph.startsWith('5. ')) {
-                      // Handle numbered lists
-                      const listItems = [];
-                      let currentList = [];
-                      
-                      const lines = tutorial.content.split('\n');
-                      for (let i = 0; i < lines.length; i++) {
-                        if (lines[i].startsWith('1. ') || lines[i].startsWith('2. ') || lines[i].startsWith('3. ') || lines[i].startsWith('4. ') || lines[i].startsWith('5. ')) {
-                          currentList.push(lines[i]);
-                        } else if (currentList.length > 0 && !lines[i].startsWith('1. ')) {
-                          // End of list
-                          break;
-                        }
-                      }
-                      
-                      if (paragraph === currentList[0]) {
-                        // This is the first item in the list
-                        const listContent = currentList.map((item, idx) => (
-                          <li key={idx} className="mb-2">{item.substring(3)}</li>
-                        ));
-                        return <ol key={index} className="list-decimal pl-6 mb-4">{listContent}</ol>;
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <h1 className="text-3xl font-bold mb-6 text-[#332a52]">{tutorialData.title}</h1>
+            <div className="prose max-w-none text-gray-700">
+              {tutorialData.content ? (
+                tutorialData.content.split('\n\n').map((paragraph, index) => {
+                  if (paragraph.startsWith('## ')) {
+                    return <h2 key={index} className="text-2xl font-semibold mt-8 mb-4 text-[#332a52]">{paragraph.substring(3)}</h2>;
+                  } else if (paragraph.startsWith('### ')) {
+                    return <h3 key={index} className="text-xl font-semibold mt-6 mb-3 text-[#5a4e7d]">{paragraph.substring(4)}</h3>;
+                  } else if (paragraph.startsWith('1. ') || paragraph.startsWith('2. ') || paragraph.startsWith('3. ') || paragraph.startsWith('4. ') || paragraph.startsWith('5. ')) {
+                    // Handle numbered lists
+                    const listItems = [];
+                    let currentList = [];
+
+                    const lines = tutorialData.content.split('\n');
+                    for (let i = 0; i < lines.length; i++) {
+                      if (lines[i].startsWith('1. ') || lines[i].startsWith('2. ') || lines[i].startsWith('3. ') || lines[i].startsWith('4. ') || lines[i].startsWith('5. ')) {
+                        currentList.push(lines[i]);
+                      } else if (currentList.length > 0 && !lines[i].startsWith('1. ')) {
+                        // End of list
+                        break;
                       }
                     }
-                    
-                    return <p key={index} className="mb-4">{paragraph}</p>;
-                  })
-                ) : (
-                  <p>Tutorial not found.</p>
-                )}
-              </div>
-              
-              <div className="mt-8">
-                <a 
-                  href="/#tutorials" 
-                  className="inline-block bg-[#332a52] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#4f46e5] transition duration-300"
-                >
-                  &larr; Back to Tutorials
-                </a>
-              </div>
+
+                    if (paragraph === currentList[0]) {
+                      // This is the first item in the list
+                      const listContent = currentList.map((item, idx) => (
+                        <li key={idx} className="mb-2">{item.substring(3)}</li>
+                      ));
+                      return <ol key={index} className="list-decimal pl-6 mb-4">{listContent}</ol>;
+                    }
+                  }
+
+                  return <p key={index} className="mb-4">{paragraph}</p>;
+                })
+              ) : (
+                <p>Tutorial content not found.</p>
+              )}
             </div>
-          )}
+
+            <div className="mt-8">
+              <a
+                href="/#tutorials"
+                className="inline-block bg-[#332a52] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#4f46e5] transition duration-300"
+              >
+                &larr; Back to Tutorials
+              </a>
+            </div>
+          </div>
         </div>
       </MainLayout>
     </>
@@ -160,8 +85,37 @@ Think about planning a path for a robot arm to move from point A to point B with
 
 // This function gets called at build time to generate the static pages
 export async function getStaticProps({ params }) {
+  const fs = require('fs');
+  const path = require('path');
+  const matter = require('gray-matter');
+
+  const contentDirectory = path.join(process.cwd(), 'content', 'tutorials');
+
+  // Look for the tutorial file with the matching ID
+  const tutorialFiles = fs.readdirSync(contentDirectory);
+  const tutorialFile = tutorialFiles.find(file =>
+    file.replace('.md', '').replace('.mdx', '') === params.id
+  );
+
+  if (!tutorialFile) {
+    return {
+      props: {
+        tutorialData: null,
+        tutorialId: params.id
+      }
+    };
+  }
+
+  const filePath = path.join(contentDirectory, tutorialFile);
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const { data, content } = matter(fileContents);
+
   return {
     props: {
+      tutorialData: {
+        ...data,
+        content
+      },
       tutorialId: params.id
     }
   };
@@ -169,11 +123,25 @@ export async function getStaticProps({ params }) {
 
 // This function gets called at build time to determine which pages to pre-render
 export async function getStaticPaths() {
-  // For development, allow fallback to generate pages on-demand
-  // In production, you would pre-generate specific paths
+  const fs = require('fs');
+  const path = require('path');
+
+  const contentDirectory = path.join(process.cwd(), 'content', 'tutorials');
+  const tutorialFiles = fs.readdirSync(contentDirectory);
+
+  // Generate paths for all tutorial files
+  const paths = tutorialFiles
+    .filter(file => file.endsWith('.md') || file.endsWith('.mdx'))
+    .map(file => {
+      const fileName = file.replace('.md', '').replace('.mdx', '');
+      return {
+        params: { id: fileName }
+      };
+    });
+
   return {
-    paths: [], // Initially empty to allow all paths during development
-    fallback: 'blocking' // Generate pages on-demand and cache them
+    paths,
+    fallback: false
   };
 }
 

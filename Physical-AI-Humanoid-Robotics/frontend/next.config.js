@@ -1,20 +1,22 @@
+ 
+ const isGithub = process.env.DEPLOY_TARGET === 'gh';
+
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-  },
-})
+});
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const vercelConfig = {
   pageExtensions: ['js', 'jsx', 'mdx'],
+};
+
+const githubConfig = {
+  pageExtensions: ['js', 'jsx', 'mdx'],
+  output: 'export',
   trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
+  images: { unoptimized: true },
   basePath: '/Physical-AI-and-Humanoid-Robotics-text-andchatbot',
   assetPrefix: '/Physical-AI-and-Humanoid-Robotics-text-andchatbot',
 };
 
-module.exports = withMDX(nextConfig);
+module.exports = withMDX(isGithub ? githubConfig : vercelConfig);

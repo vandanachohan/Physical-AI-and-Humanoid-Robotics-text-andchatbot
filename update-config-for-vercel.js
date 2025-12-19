@@ -8,8 +8,8 @@ const path = require('path');
 const configPath = path.join(__dirname, 'Physical-AI-Humanoid-Robotics', 'docusaurus.config.ts');
 let configContent = fs.readFileSync(configPath, 'utf8');
 
-// Replace the baseUrl for Vercel deployment (from /hackatone-1/ to /)
-configContent = configContent.replace(/baseUrl: '\/hackatone-1\/',/, "baseUrl: '/',");
+// Replace the baseUrl for Vercel deployment (from /Physical-AI-and-Humanoid-Robotics-text-andchatbot/ to /)
+configContent = configContent.replace(/baseUrl: '\/Physical-AI-and-Humanoid-Robotics-text-andchatbot\/',/, "baseUrl: '/',");
 
 // Write the modified config back
 fs.writeFileSync(configPath, configContent);

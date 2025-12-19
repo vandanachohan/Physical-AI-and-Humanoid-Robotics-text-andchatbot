@@ -13,21 +13,33 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/ch1-overview-history">
-            Start Reading - Physical AI & Robotics
-          </Link>
-          <Link
-            className="button button--primary button--lg margin-left--sm"
-            to="/docs/intro">
-            Introduction
-          </Link>
+        <div className="row">
+          <div className="col col--6">
+            <Heading as="h1" className="hero__title">
+              {siteConfig.title}
+            </Heading>
+            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <div className={styles.buttons}>
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/ch1-overview-history">
+                Start Reading - Physical AI & Robotics
+              </Link>
+              <Link
+                className="button button--primary button--lg margin-left--sm"
+                to="/docs/intro">
+                Introduction
+              </Link>
+            </div>
+          </div>
+          <div className="col col--6">
+            <img
+              src="/img/book-cover.svg"
+              alt="Physical AI & Humanoid Robotics Book Cover"
+              className="hero__image"
+              style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px' }}
+            />
+          </div>
         </div>
       </div>
     </header>

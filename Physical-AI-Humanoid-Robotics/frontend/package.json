@@ -7,6 +7,7 @@
     "dev:3001": "next dev -p 3001",
     "dev:3002": "next dev -p 3002",
     "build": "next build",
+    "build:gh": "DEPLOY_TARGET=gh next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,6 +18,7 @@
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "gray-matter": "^4.0.3",
     "next": "^14.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

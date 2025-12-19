@@ -41,6 +41,16 @@ const sidebars: SidebarsConfig = {
         'ch18-ai-safety-ethics',
       ],
     },
+    {
+      type: 'category',
+      label: 'Tutorials',
+      collapsible: true,
+      items: [
+        'tutorials/motion-planning',
+        'tutorials/robot-sensors',
+        'tutorials/actuator-control',
+      ],
+    },
   ],
 };
 

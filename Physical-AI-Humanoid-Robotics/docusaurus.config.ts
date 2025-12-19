@@ -18,12 +18,12 @@ const config: Config = {
   url: 'https://vandanachohan.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment from docs folder
-  baseUrl: '/Physical-AI-and-Humanoid-Robotics-text-andchatbot/',
+  baseUrl: '/Physical-AI-and-Humanoid-Robotics-text-andchatbot',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'vandanachohan', // Usually your GitHub org/user name.
-  projectName: 'Physical-AI-Humanoid-Robotics', // Usually your repo name.
+  projectName: 'Physical-AI-and-Humanoid-Robotics-text-andchatbot', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -70,7 +70,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/book-cover.svg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
