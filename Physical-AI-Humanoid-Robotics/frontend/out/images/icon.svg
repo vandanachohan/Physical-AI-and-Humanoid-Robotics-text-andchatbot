@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="90" fill="#ec407a"/>
+  <circle cx="100" cy="100" r="60" fill="#fff8f7"/>
+  <circle cx="100" cy="100" r="30" fill="#332a52"/>
+  <text x="100" y="150" font-family="Arial" font-size="16" text-anchor="middle" fill="#332a52">
+    Textbook
+  </text>
+</svg>

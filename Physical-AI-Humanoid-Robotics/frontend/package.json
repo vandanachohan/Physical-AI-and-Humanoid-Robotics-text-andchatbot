@@ -1,4 +1,4 @@
-{
+ {
   "name": "personal-book-website",
   "version": "0.1.0",
   "private": true,
@@ -9,7 +9,8 @@
     "build": "next build",
     "build:gh": "DEPLOY_TARGET=gh next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

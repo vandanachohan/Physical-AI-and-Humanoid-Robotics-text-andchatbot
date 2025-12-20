@@ -1,13 +1,12 @@
- 
- const isGithub = process.env.DEPLOY_TARGET === 'gh';
+const isGithub = process.env.DEPLOY_TARGET === 'gh';
 
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
 });
 
-/** @type {import('next').NextConfig} */
 const vercelConfig = {
   pageExtensions: ['js', 'jsx', 'mdx'],
+  reactStrictMode: true,
 };
 
 const githubConfig = {
@@ -17,6 +16,7 @@ const githubConfig = {
   images: { unoptimized: true },
   basePath: '/Physical-AI-and-Humanoid-Robotics-text-andchatbot',
   assetPrefix: '/Physical-AI-and-Humanoid-Robotics-text-andchatbot',
+  reactStrictMode: true,
 };
 
 module.exports = withMDX(isGithub ? githubConfig : vercelConfig);
