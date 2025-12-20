@@ -10,19 +10,13 @@ Built with: Next.js, TailwindCSS, Docusaurus, Claude Code, Qwen, and OpenAI Agen
 
 The Physical AI & Humanoid Robotics Textbook Project is a fully automated learning system designed to help students master:
 
-🤖 Humanoid Robotics
-
-🧠 Embodied & Physical AI
-
-⚙️ Actuators, Sensors & Mechatronics
-
-🦾 Locomotion, Balance & Movement
-
-🪫 Energy Systems & Power Design
-
-🧩 Robotics Algorithms & Control
-
-💡 Intelligent Agents & Cognitive Models
+ Humanoid Robotics
+ Embodied & Physical AI
+ Actuators, Sensors & Mechatronics
+ Locomotion, Balance & Movement
+ Energy Systems & Power Design
+ Robotics Algorithms & Control
+ Intelligent Agents & Cognitive Models
 
 The project uses AI agents to generate, update, and maintain textbook content such as chapters, examples, diagrams, and practice exercises.
 
@@ -89,6 +83,7 @@ GitHub Actions — automation
 
 # Run both at the same time (in root directory)
 concurrently "npm run dev" "cd Physical-AI-Humanoid-Robotics && npm run start"
+ View the Textbook Yotube = https://youtu.be/xqlmDBI7DIk?si=uBTQ56cYU-yct5nt
 
 🌐 View the Textbook Online
 The textbook is deployed to GitHub Pages and can be viewed at:
@@ -97,5 +92,4 @@ https://vandanachohan.github.io/Physical-AI-Humanoid-Robotics/
 
 video tutorials/Examples
 
- Githup Pages URL : https://vandanachohan.github.io/Physical-AI-and-Humanoid-Robotics-text-andchatbot/
-<video controls src="Physical AI & Humanoid Robotics - Textbook - Personal - Microsoft​ Edge 2025-12-18 13-13-57.mp4" title="book"></video>
+ Githup pages URL = https://vandanachohan.github.io/Physical-AI-and-Humanoid-Robotics-text-andchatbot/
