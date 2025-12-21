@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <!-- Book Cover Background -->
+  <rect width="400" height="600" fill="#1a365d"/>
+  
+  <!-- Book Spine -->
+  <rect x="0" y="0" width="400" height="600" fill="#1a365d" stroke="#4a5568" stroke-width="4"/>
+  
+  <!-- Title -->
+  <text x="200" y="150" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">
+    Physical AI &amp;
+  </text>
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">
+    Humanoid Robotics
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="200" y="220" font-family="Arial, sans-serif" font-size="16" fill="#cbd5e0" text-anchor="middle">
+    AI-Native Textbook on Embodied Intelligence
+  </text>
+  
+  <!-- Robot Icon -->
+  <circle cx="200" cy="320" r="60" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <rect x="170" y="380" width="60" height="100" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <rect x="150" y="290" width="100" height="20" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  
+  <!-- Arms -->
+  <rect x="120" y="320" width="30" height="10" fill="#2d3748" stroke="#4a5568" stroke-width="2" transform="rotate(-30 120 320)"/>
+  <rect x="250" y="320" width="30" height="10" fill="#2d3748" stroke="#4a5568" stroke-width="2" transform="rotate(30 280 320)"/>
+  
+  <!-- Legs -->
+  <rect x="170" y="480" width="15" height="80" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <rect x="215" y="480" width="15" height="80" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="500" r="8" fill="#4299e1"/>
+  <circle cx="300" cy="500" r="8" fill="#4299e1"/>
+  <circle cx="100" cy="550" r="8" fill="#4299e1"/>
+  <circle cx="300" cy="550" r="8" fill="#4299e1"/>
+  
+  <!-- Publisher Info -->
+  <text x="200" y="580" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e0" text-anchor="middle">
+    AI-NATIVE PUBLICATIONS
+  </text>
+</svg>
