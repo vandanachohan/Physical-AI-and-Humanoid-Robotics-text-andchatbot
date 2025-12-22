@@ -1,1 +1,17 @@
-{"/_app":"pages/_app.js","/_error":"pages/_error.js","/_document":"pages/_document.js","/404":"pages/404.html","/ai-tutor":"pages/ai-tutor.html","/api/search":"pages/api/search.js","/baby-pink-ai-tutor":"pages/baby-pink-ai-tutor.html","/baby-pink-book":"pages/baby-pink-book.html","/chapter":"pages/chapter.html","/":"pages/index.html","/sample":"pages/sample.html","/textbook/layout":"pages/textbook/layout.html","/tutorials":"pages/tutorials.js","/tutorials/[id]":"pages/tutorials/[id].js","/textbook/chapter/[id]":"pages/textbook/chapter/[id].js"}
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.js",
+  "/_error": "pages/_error.js",
+  "/ai-tutor": "pages/ai-tutor.js",
+  "/baby-pink-ai-tutor": "pages/baby-pink-ai-tutor.js",
+  "/baby-pink-book": "pages/baby-pink-book.js",
+  "/": "pages/index.js",
+  "/chapter": "pages/chapter.js",
+  "/sample": "pages/sample.js",
+  "/api/search": "pages/api/search.js",
+  "/textbook/layout": "pages/textbook/layout.js",
+  "/textbook/chapter/[id]": "pages/textbook/chapter/[id].js",
+  "/tutorials": "pages/tutorials.js",
+  "/tutorials/[id]": "pages/tutorials/[id].js"
+}

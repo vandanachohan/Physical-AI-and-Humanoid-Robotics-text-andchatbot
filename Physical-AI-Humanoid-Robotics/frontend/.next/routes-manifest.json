@@ -1,1 +1,122 @@
-{"version":3,"pages404":true,"caseSensitive":false,"basePath":"/Physical-AI-and-Humanoid-Robotics-text-andchatbot","redirects":[{"source":"/Physical-AI-and-Humanoid-Robotics-text-andchatbot","destination":"/Physical-AI-and-Humanoid-Robotics-text-andchatbot/","basePath":false,"internal":true,"statusCode":308,"regex":"^/Physical-AI-and-Humanoid-Robotics-text-andchatbot$"},{"source":"/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/","destination":"/:file","internal":true,"missing":[{"type":"header","key":"x-nextjs-data"}],"statusCode":308,"regex":"^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+))/$"},{"source":"/:notfile((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+)","destination":"/:notfile/","internal":true,"statusCode":308,"regex":"^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+))$"}],"headers":[],"dynamicRoutes":[{"page":"/textbook/chapter/[id]","regex":"^/textbook/chapter/([^/]+?)(?:/)?$","routeKeys":{"nxtPid":"nxtPid"},"namedRegex":"^/textbook/chapter/(?<nxtPid>[^/]+?)(?:/)?$"},{"page":"/tutorials/[id]","regex":"^/tutorials/([^/]+?)(?:/)?$","routeKeys":{"nxtPid":"nxtPid"},"namedRegex":"^/tutorials/(?<nxtPid>[^/]+?)(?:/)?$"}],"staticRoutes":[{"page":"/","regex":"^/(?:/)?$","routeKeys":{},"namedRegex":"^/(?:/)?$"},{"page":"/404","regex":"^/404(?:/)?$","routeKeys":{},"namedRegex":"^/404(?:/)?$"},{"page":"/ai-tutor","regex":"^/ai\\-tutor(?:/)?$","routeKeys":{},"namedRegex":"^/ai\\-tutor(?:/)?$"},{"page":"/baby-pink-ai-tutor","regex":"^/baby\\-pink\\-ai\\-tutor(?:/)?$","routeKeys":{},"namedRegex":"^/baby\\-pink\\-ai\\-tutor(?:/)?$"},{"page":"/baby-pink-book","regex":"^/baby\\-pink\\-book(?:/)?$","routeKeys":{},"namedRegex":"^/baby\\-pink\\-book(?:/)?$"},{"page":"/chapter","regex":"^/chapter(?:/)?$","routeKeys":{},"namedRegex":"^/chapter(?:/)?$"},{"page":"/sample","regex":"^/sample(?:/)?$","routeKeys":{},"namedRegex":"^/sample(?:/)?$"},{"page":"/textbook/layout","regex":"^/textbook/layout(?:/)?$","routeKeys":{},"namedRegex":"^/textbook/layout(?:/)?$"},{"page":"/tutorials","regex":"^/tutorials(?:/)?$","routeKeys":{},"namedRegex":"^/tutorials(?:/)?$"}],"dataRoutes":[{"page":"/textbook/chapter/[id]","routeKeys":{"nxtPid":"nxtPid"},"dataRouteRegex":"^/_next/data/t5uYPTQNkL5BYPtGTIM3e/textbook/chapter/([^/]+?)\\.json$","namedDataRouteRegex":"^/_next/data/t5uYPTQNkL5BYPtGTIM3e/textbook/chapter/(?<nxtPid>[^/]+?)\\.json$"},{"page":"/tutorials","dataRouteRegex":"^/_next/data/t5uYPTQNkL5BYPtGTIM3e/tutorials.json$"},{"page":"/tutorials/[id]","routeKeys":{"nxtPid":"nxtPid"},"dataRouteRegex":"^/_next/data/t5uYPTQNkL5BYPtGTIM3e/tutorials/([^/]+?)\\.json$","namedDataRouteRegex":"^/_next/data/t5uYPTQNkL5BYPtGTIM3e/tutorials/(?<nxtPid>[^/]+?)\\.json$"}],"rsc":{"header":"RSC","varyHeader":"RSC, Next-Router-State-Tree, Next-Router-Prefetch","prefetchHeader":"Next-Router-Prefetch","didPostponeHeader":"x-nextjs-postponed","contentTypeHeader":"text/x-component","suffix":".rsc","prefetchSuffix":".prefetch.rsc"},"rewrites":[]}
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [
+    {
+      "page": "/textbook/chapter/[id]",
+      "regex": "^/textbook/chapter/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/textbook/chapter/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/tutorials/[id]",
+      "regex": "^/tutorials/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/tutorials/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/404",
+      "regex": "^/404(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/404(?:/)?$"
+    },
+    {
+      "page": "/ai-tutor",
+      "regex": "^/ai\\-tutor(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ai\\-tutor(?:/)?$"
+    },
+    {
+      "page": "/baby-pink-ai-tutor",
+      "regex": "^/baby\\-pink\\-ai\\-tutor(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/baby\\-pink\\-ai\\-tutor(?:/)?$"
+    },
+    {
+      "page": "/baby-pink-book",
+      "regex": "^/baby\\-pink\\-book(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/baby\\-pink\\-book(?:/)?$"
+    },
+    {
+      "page": "/chapter",
+      "regex": "^/chapter(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/chapter(?:/)?$"
+    },
+    {
+      "page": "/sample",
+      "regex": "^/sample(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sample(?:/)?$"
+    },
+    {
+      "page": "/textbook/layout",
+      "regex": "^/textbook/layout(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/textbook/layout(?:/)?$"
+    },
+    {
+      "page": "/tutorials",
+      "regex": "^/tutorials(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials(?:/)?$"
+    }
+  ],
+  "dataRoutes": [
+    {
+      "page": "/textbook/chapter/[id]",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "dataRouteRegex": "^/_next/data/pQ7zYvsybhiPooV17RMjA/textbook/chapter/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/pQ7zYvsybhiPooV17RMjA/textbook/chapter/(?<nxtPid>[^/]+?)\\.json$"
+    },
+    {
+      "page": "/tutorials",
+      "dataRouteRegex": "^/_next/data/pQ7zYvsybhiPooV17RMjA/tutorials.json$"
+    },
+    {
+      "page": "/tutorials/[id]",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "dataRouteRegex": "^/_next/data/pQ7zYvsybhiPooV17RMjA/tutorials/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/pQ7zYvsybhiPooV17RMjA/tutorials/(?<nxtPid>[^/]+?)\\.json$"
+    }
+  ],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc"
+  },
+  "rewrites": []
+}

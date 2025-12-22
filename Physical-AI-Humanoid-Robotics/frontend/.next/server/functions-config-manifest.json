@@ -1,1 +1,8 @@
-{"version":1,"functions":{"/textbook/chapter/[id]":{},"/tutorials/[id]":{},"/tutorials":{}}}
+{
+  "version": 1,
+  "functions": {
+    "/textbook/chapter/[id]": {},
+    "/tutorials/[id]": {},
+    "/tutorials": {}
+  }
+}
