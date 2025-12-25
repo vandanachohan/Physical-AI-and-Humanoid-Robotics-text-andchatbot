@@ -4,7 +4,7 @@ import { useUser } from '../src/contexts/UserContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { user, logout } = useUser();
+  const { user, logout, loading } = useUser();
 
   const handleLogout = async () => {
     await logout();
@@ -33,8 +33,8 @@ const Navbar = () => {
               AI Tutor
             </Link>
 
-            {/* Auth links - only show if not authenticated */}
-            {!user && (
+            {/* Auth links - only show if not authenticated and not loading */}
+            {!loading && !user && (
               <>
                 <Link href="/login" className="text-gray-700 hover:text-[#332a52] font-medium transition-colors">
                   Sign In
@@ -45,8 +45,15 @@ const Navbar = () => {
               </>
             )}
 
+            {/* Show loading indicator while checking auth status */}
+            {loading && (
+              <div className="flex items-center">
+                <span className="text-gray-700">Loading...</span>
+              </div>
+            )}
+
             {/* User profile - show if authenticated */}
-            {user && (
+            {!loading && user && (
               <div className="relative group">
                 <button className="flex items-center space-x-2 focus:outline-none">
                   <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-800 font-semibold">
@@ -111,7 +118,7 @@ const Navbar = () => {
           </Link>
 
           {/* Mobile auth links */}
-          {!user && (
+          {!loading && !user && (
             <>
               <Link href="/login" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#332a52] hover:bg-gray-50">
                 Sign In
@@ -122,8 +129,15 @@ const Navbar = () => {
             </>
           )}
 
+          {/* Show loading indicator while checking auth status */}
+          {loading && (
+            <div className="block px-3 py-2 rounded-md text-base font-medium text-gray-700">
+              Loading...
+            </div>
+          )}
+
           {/* Mobile user profile */}
-          {user && (
+          {!loading && user && (
             <>
               <div className="block px-3 py-2 rounded-md text-base font-medium text-gray-700">
                 Welcome, {user.name || user.email}

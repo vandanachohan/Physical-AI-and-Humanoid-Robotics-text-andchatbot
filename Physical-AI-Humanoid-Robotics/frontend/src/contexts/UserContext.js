@@ -15,17 +15,20 @@ export const useUser = () => {
 // Initialize the Better Auth client
 let authClient;
 
-if (typeof window !== 'undefined') {
-  // Client-side
-  authClient = createAuthClient({
-    baseURL: window.location.origin, // Use the current origin
-  });
-} else {
-  // Server-side - use a default URL
-  authClient = createAuthClient({
-    baseURL: 'http://localhost:3000', // Default for SSR
-  });
-}
+// Get the base URL from environment variables or use a default
+const getBaseURL = () => {
+  if (typeof window !== 'undefined') {
+    // Client-side
+    return window.location.origin;
+  } else {
+    // Server-side - use environment variable or default
+    return process.env.NEXT_PUBLIC_AUTH_BASE_URL || 'http://localhost:3000';
+  }
+};
+
+authClient = createAuthClient({
+  baseURL: getBaseURL(),
+});
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -38,9 +41,14 @@ export const UserProvider = ({ children }) => {
         const session = await authClient.getSession();
         if (session?.session) {
           setUser(session.session.user);
+        } else {
+          // Explicitly set user to null if no session exists
+          setUser(null);
         }
       } catch (error) {
         console.error('Error fetching session:', error);
+        // In case of error, explicitly set user to null to show auth buttons
+        setUser(null);
       } finally {
         setLoading(false);
       }
@@ -142,11 +150,11 @@ export const UserProvider = ({ children }) => {
 
   const value = {
     user,
+    loading,
     login,
     register,
     logout,
-    updateUserBackground,
-    loading
+    updateUserBackground
   };
 
   return (
