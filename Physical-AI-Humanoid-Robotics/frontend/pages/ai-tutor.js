@@ -2,8 +2,22 @@ import Head from 'next/head';
 import MainLayout from '../components/MainLayout';
 import AIChatbot from '../components/AIChatbot';
 import TextbookSidebar from '../components/TextbookSidebar';
+import { useRef } from 'react';
 
 export default function AITutorPage() {
+  const aiChatbotRef = useRef(null);
+
+  const handleAskQuestion = (question) => {
+    // This function will be called when a question is selected from the sidebar
+    // We need to pass this to the AIChatbot component
+    if (aiChatbotRef.current && typeof aiChatbotRef.current.handleQuestionFromSidebar === 'function') {
+      aiChatbotRef.current.handleQuestionFromSidebar(question);
+    } else {
+      // Fallback: simulate sending the question to the chatbot
+      console.log("Question from sidebar:", question);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -32,7 +46,7 @@ export default function AITutorPage() {
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Textbook Sidebar - 40% width on large screens */}
             <div className="lg:w-2/5">
-              <TextbookSidebar />
+              <TextbookSidebar onAskQuestion={handleAskQuestion} />
             </div>
 
             {/* Chat Interface - 60% width on large screens */}
@@ -41,7 +55,7 @@ export default function AITutorPage() {
                 className="bg-white rounded-xl shadow-lg p-1 border"
                 style={{ borderColor: 'var(--primary-color)' }}
               >
-                <AIChatbot />
+                <AIChatbot ref={aiChatbotRef} />
               </div>
             </div>
           </div>

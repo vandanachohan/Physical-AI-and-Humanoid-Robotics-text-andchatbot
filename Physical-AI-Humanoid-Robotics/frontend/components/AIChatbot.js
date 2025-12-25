@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const AIChatbot = () => {
+const AIChatbot = React.forwardRef((props, ref) => {
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -17,6 +17,14 @@ const AIChatbot = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  // Expose the handleQuestionFromSidebar function to the parent component
+  React.useImperativeHandle(ref, () => ({
+    handleQuestionFromSidebar: (question) => {
+      // Simulate the user asking the question from the sidebar
+      handleSendMessageWithQuestion(question);
+    }
+  }));
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -186,6 +194,29 @@ If you'd like any concept explained in Urdu, just ask!`;
     }
   };
 
+  const handleSendMessageWithQuestion = async (question) => {
+    // Add user message to chat
+    const newUserMessage = {
+      id: messages.length + 1,
+      text: question,
+      sender: 'user',
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, newUserMessage]);
+
+    // Get and add AI response
+    const aiResponse = await getAIResponse(question);
+    const newAiMessage = {
+      id: messages.length + 2,
+      text: aiResponse,
+      sender: 'tutor',
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, newAiMessage]);
+  };
+
   const handleSendMessage = async () => {
     if (inputText.trim() === '') return;
 
@@ -292,6 +323,8 @@ If you'd like any concept explained in Urdu, just ask!`;
       </div>
     </div>
   );
-};
+});
+
+AIChatbot.displayName = 'AIChatbot';
 
 export default AIChatbot;

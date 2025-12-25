@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const TextbookSidebar = () => {
+const TextbookSidebar = ({ onAskQuestion }) => {
+  const [expandedSections, setExpandedSections] = useState({});
+  const [expandedQuickResources, setExpandedQuickResources] = useState(false);
+
   const chapters = [
     {
       id: 1,
@@ -145,6 +148,34 @@ const TextbookSidebar = () => {
     }
   ];
 
+  const toggleSection = (chapterId) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [chapterId]: !prev[chapterId]
+    }));
+  };
+
+  const toggleQuickResources = () => {
+    setExpandedQuickResources(!expandedQuickResources);
+  };
+
+  const handleAskQuestion = (question) => {
+    if (onAskQuestion) {
+      onAskQuestion(question);
+    }
+  };
+
+  const generateSectionQuestions = (sectionTitle) => {
+    const questions = [
+      `Explain ${sectionTitle} in simple words`,
+      `Give me a real-world example of ${sectionTitle}`,
+      `Why is ${sectionTitle} important in Physical AI?`,
+      `Summarize ${sectionTitle}`,
+      `Ask me a quiz question about ${sectionTitle}`
+    ];
+    return questions;
+  };
+
   return (
     <div className="bg-white rounded-lg shadow p-4 h-full overflow-y-auto">
       <h3 className="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Physical AI & Humanoid Robotics</h3>
@@ -152,36 +183,99 @@ const TextbookSidebar = () => {
       <div className="space-y-2">
         {chapters.map((chapter) => (
           <div key={chapter.id} className="border-l-2 border-indigo-200 pl-3">
-            <div className="font-medium text-gray-800">{chapter.title}</div>
-            <div className="ml-2 mt-1 space-y-1">
-              {chapter.sections.map((section) => (
-                <div 
-                  key={section.id} 
-                  className="text-sm text-gray-600 hover:text-indigo-600 cursor-pointer pl-2 hover:bg-indigo-50 p-1 rounded"
-                >
-                  {section.id} {section.title}
-                </div>
-              ))}
+            <div
+              className="font-medium text-gray-800 hover:text-indigo-600 cursor-pointer"
+              onClick={() => toggleSection(chapter.id)}
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  toggleSection(chapter.id);
+                }
+              }}
+              aria-expanded={expandedSections[chapter.id] || false}
+              role="button"
+            >
+              {chapter.title}
             </div>
+            {(expandedSections[chapter.id] || chapter.sections.length === 1) && (
+              <div className="ml-2 mt-1 space-y-1">
+                {chapter.sections.map((section) => (
+                  <div key={section.id} className="relative group">
+                    <div
+                      className="text-sm text-gray-600 hover:text-indigo-600 cursor-pointer pl-2 hover:bg-indigo-50 p-1 rounded flex justify-between items-center"
+                    >
+                      {section.id} {section.title}
+                      <button
+                        className="ml-2 text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-800 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          const questions = generateSectionQuestions(section.title);
+                          // For now, we'll ask the first question - in a real implementation, you might want to show a dropdown of questions
+                          handleAskQuestion(questions[0]);
+                        }}
+                        aria-label={`Ask AI Tutor about ${section.title}`}
+                      >
+                        Ask AI
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
       <div className="mt-6 pt-4 border-t">
-        <h4 className="font-semibold text-md text-indigo-700 mb-2">Quick Resources</h4>
-        <ul className="space-y-2 text-sm text-gray-600">
-          <li className="hover:text-indigo-600 cursor-pointer hover:bg-indigo-50 p-1 rounded">
-            📘 Introduction to Physical AI
-          </li>
-          <li className="hover:text-indigo-600 cursor-pointer hover:bg-indigo-50 p-1 rounded">
-            🔧 Actuators and Sensors Guide
-          </li>
-          <li className="hover:text-indigo-600 cursor-pointer hover:bg-indigo-50 p-1 rounded">
-            🤖 Motion Planning Tutorial
-          </li>
-          <li className="hover:text-indigo-600 cursor-pointer hover:bg-indigo-50 p-1 rounded">
-            ⚖️ AI Safety Considerations
-          </li>
-        </ul>
+        <h4
+          className="font-semibold text-md text-indigo-700 mb-2 hover:text-indigo-800 cursor-pointer"
+          onClick={toggleQuickResources}
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              toggleQuickResources();
+            }
+          }}
+          role="button"
+          aria-expanded={expandedQuickResources}
+        >
+          Quick Resources
+        </h4>
+        {expandedQuickResources && (
+          <div className="space-y-2">
+            <button
+              className="w-full text-left text-sm text-gray-600 hover:text-indigo-600 cursor-pointer hover:bg-indigo-50 p-2 rounded flex items-center"
+              onClick={() => handleAskQuestion("Give me a quick summary of Physical AI concepts")}
+            >
+              <span className="mr-2">📋</span> Quick Summary
+            </button>
+            <button
+              className="w-full text-left text-sm text-gray-600 hover:text-indigo-600 cursor-pointer hover:bg-indigo-50 p-2 rounded flex items-center"
+              onClick={() => handleAskQuestion("What are the key concepts in Physical AI?")}
+            >
+              <span className="mr-2">🔑</span> Key Concepts
+            </button>
+            <button
+              className="w-full text-left text-sm text-gray-600 hover:text-indigo-600 cursor-pointer hover:bg-indigo-50 p-2 rounded flex items-center"
+              onClick={() => handleAskQuestion("What are common mistakes students make when learning about robotics?")}
+            >
+              <span className="mr-2">❌</span> Common Mistakes
+            </button>
+            <button
+              className="w-full text-left text-sm text-gray-600 hover:text-indigo-600 cursor-pointer hover:bg-indigo-50 p-2 rounded flex items-center"
+              onClick={() => handleAskQuestion("Give me practice questions about humanoid robotics")}
+            >
+              <span className="mr-2">❓</span> Practice Questions
+            </button>
+            <button
+              className="w-full text-left text-sm text-gray-600 hover:text-indigo-600 cursor-pointer hover:bg-indigo-50 p-2 rounded flex items-center"
+              onClick={() => handleAskQuestion("I have a question about Physical AI and Robotics")}
+            >
+              <span className="mr-2">💬</span> Ask a Question
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
