@@ -1,4 +1,4 @@
-name: Deploy Docusaurus to GitHub Pages
+name: Deploy Next.js to GitHub Pages
 
 on:
   push:
@@ -19,20 +19,20 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: 'Physical-AI-Humanoid-Robotics/package-lock.json'
+          cache-dependency-path: 'Physical-AI-Humanoid-Robotics/frontend/package-lock.json'
 
       - name: Install dependencies
         run: npm install
-        working-directory: Physical-AI-Humanoid-Robotics
+        working-directory: Physical-AI-Humanoid-Robotics/frontend
 
-      - name: Build website
-        run: npm run build
-        working-directory: Physical-AI-Humanoid-Robotics
+      - name: Build website for GitHub Pages
+        run: npm run build:gh
+        working-directory: Physical-AI-Humanoid-Robotics/frontend
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./Physical-AI-Humanoid-Robotics/build
+          publish_dir: ./Physical-AI-Humanoid-Robotics/frontend/out
           publish_branch: gh-pages
           force_orphan: true

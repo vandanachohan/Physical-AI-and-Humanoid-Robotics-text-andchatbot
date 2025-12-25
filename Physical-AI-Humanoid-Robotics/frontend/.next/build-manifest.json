@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/pQ7zYvsybhiPooV17RMjA/_buildManifest.js",
-    "static/pQ7zYvsybhiPooV17RMjA/_ssgManifest.js"
+    "static/v2YXHLuFr7xlJTPNGc3hn/_buildManifest.js",
+    "static/v2YXHLuFr7xlJTPNGc3hn/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -14,23 +14,25 @@
       "static/chunks/webpack-ee7e63bc15b31913.js",
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-a2464d6d00b134e7.js",
-      "static/chunks/996-80bd74c565659df8.js",
+      "static/chunks/487-4cd525d9ff101ebe.js",
       "static/chunks/560-b8fa78e51503e748.js",
-      "static/chunks/pages/index-29932b5209c97ba9.js"
+      "static/chunks/81-355876994414b917.js",
+      "static/chunks/pages/index-0aa49eef35b198bd.js"
     ],
     "/404": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-a2464d6d00b134e7.js",
-      "static/chunks/996-80bd74c565659df8.js",
+      "static/chunks/487-4cd525d9ff101ebe.js",
       "static/chunks/560-b8fa78e51503e748.js",
-      "static/chunks/pages/404-22ece2542a4b14b0.js"
+      "static/chunks/81-355876994414b917.js",
+      "static/chunks/pages/404-8326c34141d596cc.js"
     ],
     "/_app": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-a2464d6d00b134e7.js",
-      "static/css/5f704c364b9ad3f9.css",
+      "static/css/3e4c80f49217b88f.css",
       "static/chunks/pages/_app-c3296ffdd8c89b71.js"
     ],
     "/_error": [
@@ -43,35 +45,48 @@
       "static/chunks/webpack-ee7e63bc15b31913.js",
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-a2464d6d00b134e7.js",
-      "static/chunks/996-80bd74c565659df8.js",
+      "static/chunks/487-4cd525d9ff101ebe.js",
       "static/chunks/560-b8fa78e51503e748.js",
-      "static/chunks/613-65555399e9ca20c1.js",
-      "static/chunks/pages/ai-tutor-6830607a305670b3.js"
+      "static/chunks/81-355876994414b917.js",
+      "static/chunks/581-2cce38842720b525.js",
+      "static/chunks/pages/ai-tutor-308d2b04e80127fd.js"
     ],
     "/baby-pink-ai-tutor": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-a2464d6d00b134e7.js",
-      "static/chunks/996-80bd74c565659df8.js",
+      "static/chunks/487-4cd525d9ff101ebe.js",
       "static/chunks/560-b8fa78e51503e748.js",
-      "static/chunks/613-65555399e9ca20c1.js",
-      "static/chunks/pages/baby-pink-ai-tutor-020d7a6f4118fd62.js"
+      "static/chunks/81-355876994414b917.js",
+      "static/chunks/581-2cce38842720b525.js",
+      "static/chunks/pages/baby-pink-ai-tutor-0666c34ec018a4d5.js"
     ],
     "/baby-pink-book": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-a2464d6d00b134e7.js",
-      "static/chunks/996-80bd74c565659df8.js",
+      "static/chunks/487-4cd525d9ff101ebe.js",
       "static/chunks/560-b8fa78e51503e748.js",
-      "static/chunks/pages/baby-pink-book-72ccc92c1001a16e.js"
+      "static/chunks/81-355876994414b917.js",
+      "static/chunks/pages/baby-pink-book-fc20aa618babb76d.js"
     ],
     "/chapter": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-a2464d6d00b134e7.js",
-      "static/chunks/996-80bd74c565659df8.js",
+      "static/chunks/487-4cd525d9ff101ebe.js",
       "static/chunks/560-b8fa78e51503e748.js",
-      "static/chunks/pages/chapter-eae14af2c3313b38.js"
+      "static/chunks/81-355876994414b917.js",
+      "static/chunks/pages/chapter-a7fa28753127839a.js"
+    ],
+    "/login": [
+      "static/chunks/webpack-ee7e63bc15b31913.js",
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-a2464d6d00b134e7.js",
+      "static/chunks/487-4cd525d9ff101ebe.js",
+      "static/chunks/560-b8fa78e51503e748.js",
+      "static/chunks/81-355876994414b917.js",
+      "static/chunks/pages/login-ea3cd49508c2fa22.js"
     ],
     "/sample": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
@@ -79,36 +94,47 @@
       "static/chunks/main-a2464d6d00b134e7.js",
       "static/chunks/pages/sample-218e200584624553.js"
     ],
+    "/signup": [
+      "static/chunks/webpack-ee7e63bc15b31913.js",
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-a2464d6d00b134e7.js",
+      "static/chunks/487-4cd525d9ff101ebe.js",
+      "static/chunks/560-b8fa78e51503e748.js",
+      "static/chunks/81-355876994414b917.js",
+      "static/chunks/pages/signup-5185cdc50bc89dc9.js"
+    ],
     "/textbook/chapter/[id]": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-a2464d6d00b134e7.js",
       "static/chunks/742-1a0d778dedb6c9d9.js",
       "static/chunks/560-b8fa78e51503e748.js",
-      "static/chunks/pages/textbook/chapter/[id]-2e1450c5f078c611.js"
+      "static/chunks/pages/textbook/chapter/[id]-3f36262490a81da9.js"
     ],
     "/textbook/layout": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-a2464d6d00b134e7.js",
       "static/chunks/560-b8fa78e51503e748.js",
-      "static/chunks/pages/textbook/layout-d493276a09601c5d.js"
+      "static/chunks/pages/textbook/layout-37938ac85b5c0c6e.js"
     ],
     "/tutorials": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-a2464d6d00b134e7.js",
-      "static/chunks/996-80bd74c565659df8.js",
+      "static/chunks/487-4cd525d9ff101ebe.js",
       "static/chunks/560-b8fa78e51503e748.js",
-      "static/chunks/pages/tutorials-8d02434ef8ede636.js"
+      "static/chunks/81-355876994414b917.js",
+      "static/chunks/pages/tutorials-c5d90c698c7e8e77.js"
     ],
     "/tutorials/[id]": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-a2464d6d00b134e7.js",
-      "static/chunks/996-80bd74c565659df8.js",
+      "static/chunks/487-4cd525d9ff101ebe.js",
       "static/chunks/560-b8fa78e51503e748.js",
-      "static/chunks/pages/tutorials/[id]-2023a2f4523bb93e.js"
+      "static/chunks/81-355876994414b917.js",
+      "static/chunks/pages/tutorials/[id]-e6340e6736178e0b.js"
     ]
   },
   "ampFirstPages": []

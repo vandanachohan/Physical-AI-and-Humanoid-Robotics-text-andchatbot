@@ -14,21 +14,21 @@ jobs:
       with:
         node-version: 20
         cache: 'npm'
-        
+
     - name: Install dependencies
       run: |
-        cd Physical-AI-Humanoid-Robotics
+        cd Physical-AI-Humanoid-Robotics/frontend
         npm ci
-        
-    - name: Build website
+
+    - name: Build website for GitHub Pages
       run: |
-        cd Physical-AI-Humanoid-Robotics
-        npm run build
-        
+        cd Physical-AI-Humanoid-Robotics/frontend
+        npm run build:gh
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./Physical-AI-Humanoid-Robotics/build
+        publish_dir: ./Physical-AI-Humanoid-Robotics/frontend/out
         # By default, the deployment will be available at:
-        # https://vandanachohan.github.io/Physical-AI-Humanoid-Robotics
+        # https://vandanachohan.github.io/Physical-AI-Humanoid-Robotics-text-andchatbot

@@ -69,10 +69,22 @@
       "namedRegex": "^/chapter(?:/)?$"
     },
     {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
       "page": "/sample",
       "regex": "^/sample(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/sample(?:/)?$"
+    },
+    {
+      "page": "/signup",
+      "regex": "^/signup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/signup(?:/)?$"
     },
     {
       "page": "/textbook/layout",
@@ -93,20 +105,20 @@
       "routeKeys": {
         "nxtPid": "nxtPid"
       },
-      "dataRouteRegex": "^/_next/data/pQ7zYvsybhiPooV17RMjA/textbook/chapter/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/pQ7zYvsybhiPooV17RMjA/textbook/chapter/(?<nxtPid>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/v2YXHLuFr7xlJTPNGc3hn/textbook/chapter/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/v2YXHLuFr7xlJTPNGc3hn/textbook/chapter/(?<nxtPid>[^/]+?)\\.json$"
     },
     {
       "page": "/tutorials",
-      "dataRouteRegex": "^/_next/data/pQ7zYvsybhiPooV17RMjA/tutorials.json$"
+      "dataRouteRegex": "^/_next/data/v2YXHLuFr7xlJTPNGc3hn/tutorials.json$"
     },
     {
       "page": "/tutorials/[id]",
       "routeKeys": {
         "nxtPid": "nxtPid"
       },
-      "dataRouteRegex": "^/_next/data/pQ7zYvsybhiPooV17RMjA/tutorials/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/pQ7zYvsybhiPooV17RMjA/tutorials/(?<nxtPid>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/v2YXHLuFr7xlJTPNGc3hn/tutorials/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/v2YXHLuFr7xlJTPNGc3hn/tutorials/(?<nxtPid>[^/]+?)\\.json$"
     }
   ],
   "rsc": {
